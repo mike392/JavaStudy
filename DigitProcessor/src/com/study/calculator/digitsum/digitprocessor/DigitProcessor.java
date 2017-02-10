@@ -1,6 +1,6 @@
-package study.calculator.sumofdigits.digit;
+package com.study.calculator.digitsum.digitprocessor;
 
-public class Digit {
+public class DigitProcessor {
 	
 	public long getSumOfDigits(long value){
 		long result = 0;
