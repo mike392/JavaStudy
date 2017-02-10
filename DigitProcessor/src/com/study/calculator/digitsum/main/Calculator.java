@@ -1,8 +1,9 @@
-package study.calculator.sumofdigits;
+package com.study.calculator.digitsum.main;
 
 import java.lang.reflect.Array;
 
-import study.calculator.sumofdigits.digit.Digit;
+import com.study.calculator.digitsum.digitprocessor.DigitProcessor;
+
 
 public class Calculator {
 
@@ -10,8 +11,8 @@ public class Calculator {
 		// TODO Auto-generated method stub
 		if (Array.getLength(args)>0){
 			for (String s : args) {
-				Digit digit = new Digit();
-				long result = digit.getSumOfDigits(Long.parseLong(s));
+				DigitProcessor digitProcessor = new DigitProcessor();
+				long result = digitProcessor.getSumOfDigits(Long.parseLong(s));
 				System.out.println("Number " + s + " has sum of digits equal to " + String.valueOf(result));
 			}
 		} else {

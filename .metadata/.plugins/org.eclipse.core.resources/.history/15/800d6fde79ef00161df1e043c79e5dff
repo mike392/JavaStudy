@@ -1,0 +1,26 @@
+package com.study.calculator.shapecalc.main;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.lang.reflect.Array;
+import java.util.Scanner;
+
+import com.study.calculator.shapecalc.shape.impl.Circle;
+import com.study.calculator.shapecalc.utils.Constants;
+import com.study.calculator.shapecalc.shape.Shape;
+
+public class ParamsCalculator {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		FileReader reader;
+		try {
+			reader = new FileReader(Constants.inputPath);
+		} catch (FileNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+	}
+	
+}
