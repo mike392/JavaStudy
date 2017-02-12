@@ -1,13 +1,14 @@
 package com.study.calculator.shapecalc.shapeaction.impl;
 
+import com.study.calculator.shapecalc.shape.Shape;
 import com.study.calculator.shapecalc.shape.impl.Circle;
 import com.study.calculator.shapecalc.shapeaction.ShapeAction;
 
 public class CircleAction implements ShapeAction{
 	private Circle circle;
 	
-	public CircleAction(Circle circle){
-		this.circle = circle;
+	public CircleAction(Shape circle){
+		this.circle = (Circle) circle;
 	}
 	@Override
 	public double computeSquare() {

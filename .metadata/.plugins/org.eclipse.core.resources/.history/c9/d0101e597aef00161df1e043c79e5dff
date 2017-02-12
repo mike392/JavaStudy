@@ -1,7 +1,0 @@
-package com.study.calculator.shapecalc.utils;
-
-public class Constants {
-	public static final String inputPath = "com/study/calculator/shapecalc/resources/inFile.txt";
-	public static final String outputPath = "com/study/calculator/shapecalc/resources/outFile.txt";
-
-}

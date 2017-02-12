@@ -1,14 +1,19 @@
 package com.study.calculator.shapecalc.main;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import com.study.calculator.shapecalc.utils.Constants;
+import java.io.IOException;
+
+import com.study.calculator.shapecalc.utils.InputIdentifier;
+import com.study.calculator.shapecalc.utils.InputReader;
+import com.study.calculator.shapecalc.utils.ReportGenerator;
 
 public class ParamsCalculator {
 
-	public static void main(String[] args) throws FileNotFoundException {
+	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
-		FileReader reader = new FileReader(Constants.inputPath);
-		System.out.print(reader != null);
+		InputIdentifier identifier = new InputIdentifier(args);
+		InputReader reader = identifier.getReader();
+		InputProcessor processor = new InputProcessor(reader.readInput());
+		ReportGenerator report = new ReportGenerator(processor.generateOutput());
+		report.printReport();
 	}
 	
 }
