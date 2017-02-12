@@ -1,22 +1,20 @@
 package com.study.calculator.digitsum.main;
 
-import java.lang.reflect.Array;
+import java.io.IOException;
 
-import com.study.calculator.digitsum.digitprocessor.DigitProcessor;
+import com.study.calculator.digitsum.utils.InputIdentifier;
+import com.study.calculator.digitsum.utils.InputReader;
+import com.study.calculator.digitsum.utils.ReportGenerator;
 
 
 public class Calculator {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
-		if (Array.getLength(args)>0){
-			for (String s : args) {
-				DigitProcessor digitProcessor = new DigitProcessor();
-				long result = digitProcessor.getSumOfDigits(Long.parseLong(s));
-				System.out.println("Number " + s + " has sum of digits equal to " + String.valueOf(result));
-			}
-		} else {
-			System.out.println("Please, enter the digit");
-		}
+		InputIdentifier identifier = new InputIdentifier(args);
+		InputReader reader = identifier.getReader();
+		InputProcessor processor = new InputProcessor(reader.readInput());
+		ReportGenerator generator = new ReportGenerator(processor.generateOutput());
+		generator.printReport();
 	}
 }

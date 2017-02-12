@@ -1,4 +1,4 @@
-package com.study.calculator.shapecalc.utils;
+package com.study.calculator.digitsum.utils;
 
 import java.io.FileWriter;
 import java.io.IOException;

@@ -1,0 +1,4 @@
+Digit 3453453 has sum of digits 27
+Digit 3345 has sum of digits 15
+Digit 45645 has sum of digits 24
+Digit -123 has sum of digits 6

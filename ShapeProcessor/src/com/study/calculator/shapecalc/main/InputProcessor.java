@@ -6,6 +6,7 @@ import java.util.List;
 import com.study.calculator.shapecalc.shape.impl.Circle;
 import com.study.calculator.shapecalc.shapeaction.ShapeAction;
 import com.study.calculator.shapecalc.shapeaction.impl.CircleAction;
+import com.study.calculator.shapecalc.utils.Constants;
 
 public class InputProcessor {
 	
@@ -17,8 +18,8 @@ public class InputProcessor {
 	
 	public List<String> generateOutput(){
 		List<String> output = new LinkedList<String>();
-		if (input == null){
-			output.add("Some error occurred");
+		if (input.size() == 0){
+			output.add(Constants.WRONG_INPUT_MESSAGE);
 		} else {
 			for (Double item : input){
 				Circle circle = new Circle(item.doubleValue());
