@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="java.util.regex.Pattern"/>
+<fullyQualifiedTypeName name="com.java.study.matrixbuilder.matrixfactory.MatrixCreator"/>
+<fullyQualifiedTypeName name="com.java.study.matrixbuilder.matrix.Matrix"/>
+<fullyQualifiedTypeName name="com.java.study.matrixbuilder.pattern.impl.MatrixPatternImpl"/>
+<fullyQualifiedTypeName name="com.java.study.matrixbuilder.utils.MatrixPopulator"/>
+<fullyQualifiedTypeName name="com.java.study.matrixbuilder.utils.ReportPrinter"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.java.study.matrixbuilder.pattern.MatrixPattern"/>
+<fullyQualifiedTypeName name="com.java.study.matrixbuilder.utils.Constants"/>
+<fullyQualifiedTypeName name="com.java.study.matrixbuilder.pattern.impl.MatrixPatternSpecialImpl"/>
+</qualifiedTypeNameHistroy>

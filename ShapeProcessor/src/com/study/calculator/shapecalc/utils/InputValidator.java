@@ -8,18 +8,20 @@ public class InputValidator {
 	public static List<Double> validateInput(List<String> input){
 		List<Double> result = new LinkedList<Double>();
 		for (String item : input){
-			if (isDouble(item)){
+			if (isPositiveDouble(item)){
 				result.add(Double.parseDouble(item));
 			}
 		}
 		return result;	
 	}
 	
-	private static boolean isDouble(String input){
+	private static boolean isPositiveDouble(String input){
 		boolean result = false;
 		try {
-			Double.parseDouble(input);
-			result = true;
+			double value = Double.parseDouble(input);
+			if (value > 0){
+				result = true;
+			}
 		} catch(Exception e){
 			
 		}

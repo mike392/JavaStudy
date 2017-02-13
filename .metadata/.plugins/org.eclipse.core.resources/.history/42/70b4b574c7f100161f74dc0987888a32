@@ -1,0 +1,28 @@
+package com.study.calculator.shapecalc.utils;
+
+import java.util.LinkedList;
+import java.util.List;
+
+public class InputValidator {
+	
+	public static List<Double> validateInput(List<String> input){
+		List<Double> result = new LinkedList<Double>();
+		for (String item : input){
+			if (isDouble(item)){
+				result.add(Double.parseDouble(item));
+			}
+		}
+		return result;	
+	}
+	
+	private static boolean isDouble(String input){
+		boolean result = false;
+		try {
+			Double.parseDouble(input);
+			result = true;
+		} catch(Exception e){
+			
+		}
+		return result;
+	}
+}

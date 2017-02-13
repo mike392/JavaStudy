@@ -1,0 +1,21 @@
+package com.java.study.matrixbuilder.pattern.impl;
+
+import java.util.Arrays;
+
+import com.java.study.matrixbuilder.pattern.MatrixPattern;
+import com.java.study.matrixbuilder.utils.Constants;
+
+public class MatrixPatternImpl implements MatrixPattern{
+
+	@Override
+	public int generateValue(int verticalParameter, int horizontalParameter) {
+		// TODO Auto-generated method stub
+		int result = 0;
+		int[] conditionList = {0, (Constants.MATRIX_PARAMETER - 1)};
+		if (Arrays.asList(conditionList).contains(verticalParameter) || Arrays.asList(conditionList).contains(horizontalParameter)){
+			result = 1;
+		}  
+		return 0;
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.java.study.matrixbuilder.pattern;
+
+public interface MatrixPattern {
+
+}

@@ -1,0 +1,10 @@
+package com.java.study.matrixbuilder.main;
+
+public class MatrixBuilder {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
