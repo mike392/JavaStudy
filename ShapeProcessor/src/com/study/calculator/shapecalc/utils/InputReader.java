@@ -1,10 +1,9 @@
 package com.study.calculator.shapecalc.utils;
 
-import java.io.FileNotFoundException;
 import java.util.List;
 
 public abstract interface InputReader {
 	
-	public abstract List<Double> readInput() throws FileNotFoundException;
+	public abstract List<Double> readInput();
 
 }

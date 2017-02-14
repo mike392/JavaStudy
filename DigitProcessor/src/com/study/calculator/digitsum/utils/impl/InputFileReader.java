@@ -12,14 +12,20 @@ import com.study.calculator.digitsum.utils.InputValidator;
 
 public class InputFileReader implements InputReader {
 
-	public List<Long> readInput() throws FileNotFoundException{
+	public List<Long> readInput(){
 		List<String> inputArgs = new LinkedList<String>();
 		File file = new File(Constants.INPUT_PATH);
-		Scanner scanner = new Scanner(file);
-		while (scanner.hasNext()){
-			inputArgs.add(scanner.next());
+		try {
+			Scanner scanner = new Scanner(file);
+			while (scanner.hasNext()){
+				inputArgs.add(scanner.next());
+			}
+			scanner.close();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-		scanner.close();
+
 		return InputValidator.validateInput(inputArgs);
 	}
 	

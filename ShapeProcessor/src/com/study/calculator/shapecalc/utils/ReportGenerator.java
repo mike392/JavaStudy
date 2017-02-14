@@ -12,12 +12,18 @@ public class ReportGenerator {
 		this.input = input;
 	}
 	
-	public void printReport() throws IOException{
-		FileWriter writer = new FileWriter(Constants.OUTPUT_PATH);
-		for (String line : input){
-			writer.write(line);
+	public void printReport(){
+		try {
+			FileWriter writer = new FileWriter(Constants.OUTPUT_PATH);
+			for (String line : input){
+				writer.write(line);
+			}
+			writer.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-		writer.close();
+
 	}
 	
 }

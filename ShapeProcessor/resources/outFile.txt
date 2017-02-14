@@ -1,2 +1,1 @@
-Shape with radius 4.0 square equals 50.26548245743669 and perimeter equals 25.132741228718345
 Shape with radius 56.0 square equals 9852.03456165759 and perimeter equals 351.85837720205683
