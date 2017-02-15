@@ -1,0 +1,3 @@
+Student name = Semenov he has mark = 10
+Student name = Sidorov he has mark = 9
+Student name = Ivanov he has mark = 8

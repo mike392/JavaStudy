@@ -1,0 +1,10 @@
+package com.study.abiturient.abiturientlist.main;
+
+public class AbiturientListProcessor {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

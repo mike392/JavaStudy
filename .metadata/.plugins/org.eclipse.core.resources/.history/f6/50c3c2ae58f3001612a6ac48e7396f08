@@ -1,0 +1,27 @@
+package com.study.abiturient.abiturientlist.utils;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class InputDataMapGenerator {
+	private Map<String, Integer> inputMap = new HashMap<String, Integer>(); 
+	
+	public HashMap<String, Integer> generateListWithMarks(){
+		HashMap<String, Integer> result = new HashMap<String, Integer>();
+		try {
+			FileReader reader = new FileReader(Constants.INPUT_PATH);
+			BufferedReader br = new BufferedReader(reader);
+			for (Readable line : br.lines().toArray()){
+				System.out.println("1");
+			}
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return result;
+	}
+}

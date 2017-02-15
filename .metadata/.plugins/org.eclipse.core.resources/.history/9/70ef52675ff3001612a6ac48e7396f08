@@ -1,0 +1,25 @@
+package com.study.abiturient.abiturientlist.utils;
+
+public class MarksListValidator {
+
+	public static boolean isString(Object value) {
+		// TODO Auto-generated method stub
+		boolean result = false;
+		return result;
+	}
+
+	public static boolean isPositiveInt(Object value) {
+		// TODO Auto-generated method stub
+		boolean result = false;
+		try {
+			int parsedValue = Integer.parseInt((String) value);
+			if (parsedValue >= 0){
+				result = true;
+			}
+		} catch(Exception e){
+			
+		}
+		return result; 
+	}
+
+}

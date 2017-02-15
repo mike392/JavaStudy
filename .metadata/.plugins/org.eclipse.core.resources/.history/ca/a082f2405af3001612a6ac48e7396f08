@@ -1,0 +1,15 @@
+package com.study.abiturient.abiturientlist.main;
+
+import java.util.HashMap;
+
+import com.study.abiturient.abiturientlist.utils.InputDataMapGenerator;
+
+public class AbiturientListProcessor {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		InputDataMapGenerator generator = new InputDataMapGenerator();
+		HashMap<String,Integer> list = generator.generateListWithMarks();
+	}
+
+}

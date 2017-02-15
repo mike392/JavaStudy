@@ -1,0 +1,10 @@
+package com.study.abiturient.abiturientlist.utils;
+
+public class MarksListValidator {
+
+	public static String validateString(Object value) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

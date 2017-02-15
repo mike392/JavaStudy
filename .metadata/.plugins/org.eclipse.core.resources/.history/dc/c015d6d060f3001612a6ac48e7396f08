@@ -1,0 +1,25 @@
+package com.study.abiturient.abiturientlist.utils;
+
+import java.util.HashMap;
+import java.util.Map.Entry;
+import java.util.SortedSet;
+import java.util.TreeSet;
+
+import com.study.abiturient.abiturientlist.abiturient.Abiturient;
+
+public class AbiturientListGenerator {
+	
+	public static SortedSet<Abiturient> generateAbiturientList(HashMap<String, String> listWithMarks){
+		SortedSet<Abiturient> result = new TreeSet<Abiturient>();
+		if (listWithMarks.size() > 0){
+			for (Entry entry : listWithMarks.entrySet()){
+				Abiturient abiturient = new Abiturient();
+				if (MarksListValidator.isAlphaString(entry.getKey()) && MarksListValidator.isPositiveInt(entry.getValue())){
+					abiturient.setName((String) entry.getKey());
+					abiturient.setMark(Integer.parseInt((String) entry.getValue()));
+				}
+			}
+		}
+		return result;
+	}
+}
