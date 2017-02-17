@@ -11,7 +11,8 @@ public class Calculator {
 
 	public static void main(String[] args){
 		// TODO Auto-generated method stub
-		InputReader reader = InputIdentifier.getReader(args);
+		InputIdentifier identifier = new InputIdentifier(args);
+		InputReader reader = identifier.getReader();
 		List<Long> input = reader.readInput();
 		List<String> output = InputProcessor.generateOutput(input);
 		ReportGenerator.printReport(output);

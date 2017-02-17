@@ -5,7 +5,13 @@ import com.study.shapecalc.utils.impl.InputFileReader;
 
 public class InputIdentifier {
 	
-	public static InputReader getReader(String[] inputParameters){
+	private String[] inputParameters;
+	
+	public InputIdentifier(String[] args){
+		inputParameters = args;
+	}
+	
+	public InputReader getReader(){
 		InputReader reader = null;
 		if (inputParameters.length > 0){
 			reader = new InputConsoleReader(inputParameters);
