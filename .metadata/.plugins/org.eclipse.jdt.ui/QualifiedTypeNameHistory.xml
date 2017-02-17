@@ -7,8 +7,23 @@
 <fullyQualifiedTypeName name="com.java.study.matrixbuilder.pattern.impl.MatrixPatternImpl"/>
 <fullyQualifiedTypeName name="com.java.study.matrixbuilder.utils.MatrixPopulator"/>
 <fullyQualifiedTypeName name="com.java.study.matrixbuilder.utils.ReportPrinter"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.java.study.matrixbuilder.pattern.MatrixPattern"/>
 <fullyQualifiedTypeName name="com.java.study.matrixbuilder.utils.Constants"/>
 <fullyQualifiedTypeName name="com.java.study.matrixbuilder.pattern.impl.MatrixPatternSpecialImpl"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.io.FileReader"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.util.TreeSet"/>
+<fullyQualifiedTypeName name="java.util.Map.Entry"/>
+<fullyQualifiedTypeName name="com.study.abiturient.abiturientlist.utils.AbiturientListGenerator"/>
+<fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="java.util.Comparator"/>
+<fullyQualifiedTypeName name="com.study.abiturient.abiturientlist.utils.CustomAbiturientComparator"/>
+<fullyQualifiedTypeName name="com.study.abiturient.abiturientlist.utils.ListSorter"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.study.abiturient.abiturientlist.abiturient.Abiturient"/>
+<fullyQualifiedTypeName name="com.study.abiturient.abiturientlist.utils.ReportPrinter"/>
+<fullyQualifiedTypeName name="com.study.abiturient.abiturientlist.utils.Constants"/>
 </qualifiedTypeNameHistroy>
