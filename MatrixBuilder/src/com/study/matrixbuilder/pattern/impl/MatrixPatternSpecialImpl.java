@@ -7,7 +7,6 @@ public class MatrixPatternSpecialImpl implements MatrixPattern{
 
 	@Override
 	public int generateValue(int verticalParameter, int horizontalParameter) {
-		// TODO Auto-generated method stub
 		int result = 0;
 		if (verticalParameter % 2 > 0){
 			result = horizontalParameter + 1;

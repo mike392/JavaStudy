@@ -13,7 +13,6 @@ public class ReportPrinter {
 				writer.write("Student name = " + item.getName() + " he has mark = " + item.getMark() + "\n");
 			}
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

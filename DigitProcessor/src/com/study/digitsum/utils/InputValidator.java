@@ -3,6 +3,10 @@ package com.study.digitsum.utils;
 import java.util.LinkedList;
 import java.util.List;
 
+import org.apache.logging.log4j.Level;
+
+import com.study.digitsum.main.Calculator;
+
 public class InputValidator {
 	
 	public static List<Long> validateInput(List<String> input){
@@ -21,7 +25,7 @@ public class InputValidator {
 			Long.parseLong(input);
 			result = true;
 		} catch(NumberFormatException e){
-			e.printStackTrace();
+			Calculator.logger.log(Level.WARN, "The input is not a number - " + input);
 		}
 		return result;
 	}

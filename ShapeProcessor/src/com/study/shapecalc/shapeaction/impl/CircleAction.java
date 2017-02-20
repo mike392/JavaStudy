@@ -12,13 +12,11 @@ public class CircleAction implements ShapeAction{
 	}
 	@Override
 	public double computeSquare() {
-		// TODO Auto-generated method stub
 		return Math.PI * Math.pow(circle.getRadius(), 2);
 	}
 
 	@Override
 	public double computePerimeter() {
-		// TODO Auto-generated method stub
 		return 2 * Math.PI * circle.getRadius();
 	}
 

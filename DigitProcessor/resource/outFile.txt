@@ -1,3 +1,5 @@
 Digit 343 has sum of digits 10
 Digit -34 has sum of digits 7
 Digit 444 has sum of digits 12
+Digit 5464 has sum of digits 19
+Digit 45 has sum of digits 9

@@ -10,12 +10,10 @@ public class Circle implements Shape{
 	}
 	
 	public double getRadius() {
-		// TODO Auto-generated method stub
 		return radius;
 	}
 
 	public void setRadius(double radius) {
-		// TODO Auto-generated method stub
 		this.radius = radius;
 	}
 

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="InputReaderTest" project="DigitProcessor" tests="2" started="2" failures="0" errors="0" ignored="0">
-  <testsuite name="test.com.study.digitsum.utils.InputReaderTest" time="0.0">
-    <testcase name="inputReaderConsoleReadPositive" classname="test.com.study.digitsum.utils.InputReaderTest" time="0.0"/>
-    <testcase name="inputReaderConsoleReadNegative" classname="test.com.study.digitsum.utils.InputReaderTest" time="0.0"/>
-  </testsuite>
-</testrun>

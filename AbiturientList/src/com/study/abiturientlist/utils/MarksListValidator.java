@@ -3,7 +3,6 @@ package com.study.abiturientlist.utils;
 public class MarksListValidator {
 
 	public static boolean isAlphaString(Object value) {
-		// TODO Auto-generated method stub
 		boolean result = true;
 		String stringValue = (String) value;
 		for (int i = 0; i < stringValue.length(); i++){
@@ -16,7 +15,6 @@ public class MarksListValidator {
 	}
 
 	public static boolean isPositiveInt(Object value) {
-		// TODO Auto-generated method stub
 		boolean result = false;
 		try {
 			int parsedValue = Integer.parseInt((String) value);

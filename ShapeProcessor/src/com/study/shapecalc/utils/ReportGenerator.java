@@ -12,7 +12,6 @@ public class ReportGenerator {
 				writer.write(line);
 			}
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 

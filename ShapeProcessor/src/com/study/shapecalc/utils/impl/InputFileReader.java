@@ -20,7 +20,6 @@ public class InputFileReader implements InputReader {
 				inputArgs.add(scanner.next());
 			}
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 

@@ -9,7 +9,6 @@ import com.study.shapecalc.utils.ReportGenerator;
 public class ParamsCalculator {
 
 	public static void main(String[] args){
-		// TODO Auto-generated method stub
 		InputReader reader = InputIdentifier.getReader(args);
 		List<Double> input = reader.readInput();
 		List<String> output = InputProcessor.generateOutput(input);

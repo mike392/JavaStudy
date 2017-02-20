@@ -15,7 +15,6 @@ import com.study.abiturientlist.utils.ReportPrinter;
 public class AbiturientListProcessor {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		HashMap<String,String> list = InputDataMapGenerator.generateListWithMarks();
 		List<Abiturient> abiturientList = AbiturientListGenerator.generateAbiturientList(list);
 		AbiturientMarkComparator comparator = new AbiturientMarkComparator();

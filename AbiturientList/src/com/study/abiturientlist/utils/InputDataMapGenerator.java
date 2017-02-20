@@ -16,7 +16,6 @@ public class InputDataMapGenerator {
 				result.put(values[0], values[1]);
 			}
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return result;

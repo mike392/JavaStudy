@@ -12,7 +12,6 @@ import com.study.matrixbuilder.utils.ReportPrinter;
 public class MatrixBuilder {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Matrix matrix = MatrixCreator.createEmptySquareMatrix(Constants.MATRIX_PARAMETER);
 		MatrixPattern pattern = new MatrixPatternImpl();
 		matrix = MatrixPopulator.getPopulatedMatrix(pattern, matrix);

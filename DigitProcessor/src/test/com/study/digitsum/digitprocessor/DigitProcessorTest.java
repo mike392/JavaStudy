@@ -1,7 +1,5 @@
 package test.com.study.digitsum.digitprocessor;
 
-import static org.mockito.Mockito.*;
-
 import org.junit.Assert;
 import org.junit.Test;
 

@@ -26,4 +26,10 @@
 <fullyQualifiedTypeName name="com.study.abiturient.abiturientlist.abiturient.Abiturient"/>
 <fullyQualifiedTypeName name="com.study.abiturient.abiturientlist.utils.ReportPrinter"/>
 <fullyQualifiedTypeName name="com.study.abiturient.abiturientlist.utils.Constants"/>
+<fullyQualifiedTypeName name="com.study.digitsum.utils.impl.InputFileReader"/>
+<fullyQualifiedTypeName name="com.study.digitsum.utils.InputIdentifier"/>
+<fullyQualifiedTypeName name="com.study.digitsum.utils.InputReader"/>
+<fullyQualifiedTypeName name="org.junit.Test"/>
+<fullyQualifiedTypeName name="junit.framework.Assert"/>
+<fullyQualifiedTypeName name="com.study.digitsum.utils.impl.InputConsoleReader"/>
 </qualifiedTypeNameHistroy>
