@@ -10,11 +10,12 @@ import com.study.digitsum.digitprocessor.DigitProcessor;
 public class DigitProcessorTest {
 	@Test
 	public void getSumOfDigitsPositive(){
-		//class mock creation
-		DigitProcessor processor = mock(DigitProcessor.class);
-		//behavior definition
-		when(processor.getSumOfDigits(13L)).thenReturn(4L);
-		long result = processor.getSumOfDigits(13L);
+		long result = DigitProcessor.getSumOfDigits(13L);
 		Assert.assertEquals(4L, result);
+	}
+	
+	public void getSumOfNegativeDigitsPositive(){
+		long result = DigitProcessor.getSumOfDigits(-12L);
+		Assert.assertEquals(3L, result);
 	}
 }

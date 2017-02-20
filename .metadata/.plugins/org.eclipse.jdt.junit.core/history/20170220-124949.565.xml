@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="InputIdentifierTest" project="DigitProcessor" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="test.com.study.digitsum.utils.InputIdentifierTest" time="0.0">
+    <testcase name="InputFileReaderCreationTest" classname="test.com.study.digitsum.utils.InputIdentifierTest" time="0.0"/>
+    <testcase name="InputConsoleReaderCreationTest" classname="test.com.study.digitsum.utils.InputIdentifierTest" time="0.0"/>
+  </testsuite>
+</testrun>

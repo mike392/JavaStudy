@@ -14,8 +14,7 @@ public class InputProcessor {
 			output.add(Constants.WRONG_OUTPUT_MESSAGE);
 		} else {
 			for (Long item : input){
-				DigitProcessor processor = new DigitProcessor();
-				long computeResult = processor.getSumOfDigits(item.longValue());
+				long computeResult = DigitProcessor.getSumOfDigits(item.longValue());
 				output.add("Digit " + item.longValue() + " has sum of digits " + computeResult + "\n");
 			}
 		}
