@@ -1,0 +1,7 @@
+package com.study.tune.util;
+
+import Comparator;
+
+public class TuneDurationComparatorAsc extends Comparator {
+
+}

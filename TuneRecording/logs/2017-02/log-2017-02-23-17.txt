@@ -1,0 +1,9 @@
+2017-02-23 17:50:30 [main] WARN  com.study.tune.main.TuneRecordingProcessor - The input has wrong genre - ROCK
+2017-02-23 17:50:30 [main] WARN  com.study.tune.main.TuneRecordingProcessor - The input has wrong genre - POP
+2017-02-23 17:50:30 [main] WARN  com.study.tune.main.TuneRecordingProcessor - The input has wrong genre - RAP
+2017-02-23 17:57:41 [main] WARN  com.study.tune.main.TuneRecordingProcessor - The input has wrong genre - ROCK
+2017-02-23 17:57:41 [main] WARN  com.study.tune.main.TuneRecordingProcessor - The input has wrong genre - POP
+2017-02-23 17:57:41 [main] WARN  com.study.tune.main.TuneRecordingProcessor - The input has wrong genre - RAP
+2017-02-23 17:58:12 [main] WARN  com.study.tune.main.TuneRecordingProcessor - The input has wrong genre - ROCK
+2017-02-23 17:58:12 [main] WARN  com.study.tune.main.TuneRecordingProcessor - The input has wrong genre - POP
+2017-02-23 17:58:12 [main] WARN  com.study.tune.main.TuneRecordingProcessor - The input has wrong genre - RAP

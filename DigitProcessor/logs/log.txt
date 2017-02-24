@@ -1,5 +1,8 @@
-2017-02-20 18:23:47 [main] WARN  com.study.digitsum.main.Calculator - The input is not a number - -122.999
-2017-02-20 18:24:18 [main] WARN  com.study.digitsum.main.Calculator - The input is not a number - -122.999
-2017-02-20 18:24:18 [main] WARN  com.study.digitsum.main.Calculator - The input is not a number - dffsgdfgs
-2017-02-20 18:24:18 [main] WARN  com.study.digitsum.main.Calculator - The input is not a number - трятя
-2017-02-20 18:24:18 [main] WARN  com.study.digitsum.main.Calculator - The input is not a number - тря
+2017-02-24 16:58:38 [main] WARN  com.study.digitsum.main.Calculator - The input is not a number - -122.999
+2017-02-24 16:58:38 [main] WARN  com.study.digitsum.main.Calculator - The input is not a number - dffsgdfgs
+2017-02-24 16:58:38 [main] WARN  com.study.digitsum.main.Calculator - The input is not a number - трятя
+2017-02-24 16:58:38 [main] WARN  com.study.digitsum.main.Calculator - The input is not a number - тря
+2017-02-24 16:58:40 [main] WARN  com.study.digitsum.main.Calculator - The input is not a number - -122.999
+2017-02-24 16:58:40 [main] WARN  com.study.digitsum.main.Calculator - The input is not a number - dffsgdfgs
+2017-02-24 16:58:40 [main] WARN  com.study.digitsum.main.Calculator - The input is not a number - трятя
+2017-02-24 16:58:40 [main] WARN  com.study.digitsum.main.Calculator - The input is not a number - тря

@@ -1,0 +1,8 @@
+package com.study.tune.action;
+
+public class <T extends Tune> TuneTypePopulator {
+	
+	public static void populateTuneType(T input){
+		
+	}
+}

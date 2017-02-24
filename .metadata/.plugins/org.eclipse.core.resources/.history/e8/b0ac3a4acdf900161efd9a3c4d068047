@@ -1,0 +1,13 @@
+package com.study.tune.creator;
+
+import java.lang.reflect.Constructor;
+
+import com.study.tune.entity.Tune;
+
+public class TuneCreator {
+	
+	public static createTuneBasedOnType(String type){
+		Constructor<?> tuneConstructor = Class.forName(type).getConstructor();
+		return tuneConstructor.newInstance(); 
+	}
+}

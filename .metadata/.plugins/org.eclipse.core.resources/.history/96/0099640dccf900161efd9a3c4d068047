@@ -1,0 +1,25 @@
+package com.study.tune.entity;
+
+import java.util.LinkedList;
+
+public class TuneList {
+	private static LinkedList<Tune> tuneList = new LinkedList<Tune>();
+	
+	public static <T extends Tune> void addTune(T item){
+		tuneList.add(item);
+	}
+	
+	public static <T extend Tune> void removeTune(T item){
+		tuneList.remove(item);
+	}
+	
+	public static LinkedList<Tune> getTuneList() {
+		return tuneList;
+	}
+
+	public static void setTuneList(LinkedList<Tune> tuneList) {
+		TuneList.tuneList = tuneList;
+	}
+	
+	
+}

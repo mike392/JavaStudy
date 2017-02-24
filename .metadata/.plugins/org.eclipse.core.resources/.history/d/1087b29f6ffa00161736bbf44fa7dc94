@@ -1,0 +1,30 @@
+package com.study.tune.action;
+
+import java.lang.reflect.Field;
+
+import org.apache.logging.log4j.Level;
+
+import com.study.tune.entity.Tune;
+import com.study.tune.main.TuneRecordingProcessor;
+
+public class TuneTypePopulator  {
+	
+	public static <T extends Tune> void populateTuneType(T input, String value){
+		if (hasEnum(input)) {
+			
+		} else {
+			
+		}
+	}
+
+	private static <T> boolean hasEnum(T input) {
+		Field field = null;
+		Class<?> clazz = input.getClass();
+		try {
+			field = clazz.getField("TuneType");
+		} catch (Exception e) {
+			TuneRecordingProcessor.logger.log(Level.ERROR, e.getClass().getSimpleName());
+		} 
+		return field;
+	}
+}

@@ -1,0 +1,15 @@
+package com.study.tune.main;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import com.study.digitsum.main.Calculator;
+
+public class TuneRecordingProcessor {
+	public static Logger logger = LogManager.getLogger(TuneRecordingProcessor.class);
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

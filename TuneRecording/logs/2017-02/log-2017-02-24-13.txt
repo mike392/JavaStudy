@@ -1,0 +1,2 @@
+2017-02-24 13:06:31 [main] WARN  com.study.tune.main.TuneRecordingProcessor - Wrong tune type was entered - FEMALE
+2017-02-24 13:06:37 [main] WARN  com.study.tune.main.TuneRecordingProcessor - The input for tune type is not a number - 3

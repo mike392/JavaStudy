@@ -18,11 +18,9 @@
 <fullyQualifiedTypeName name="java.util.TreeSet"/>
 <fullyQualifiedTypeName name="java.util.Map.Entry"/>
 <fullyQualifiedTypeName name="com.study.abiturient.abiturientlist.utils.AbiturientListGenerator"/>
-<fullyQualifiedTypeName name="java.util.LinkedList"/>
 <fullyQualifiedTypeName name="java.util.Comparator"/>
 <fullyQualifiedTypeName name="com.study.abiturient.abiturientlist.utils.CustomAbiturientComparator"/>
 <fullyQualifiedTypeName name="com.study.abiturient.abiturientlist.utils.ListSorter"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.study.abiturient.abiturientlist.abiturient.Abiturient"/>
 <fullyQualifiedTypeName name="com.study.abiturient.abiturientlist.utils.ReportPrinter"/>
 <fullyQualifiedTypeName name="com.study.abiturient.abiturientlist.utils.Constants"/>
@@ -32,4 +30,18 @@
 <fullyQualifiedTypeName name="org.junit.Test"/>
 <fullyQualifiedTypeName name="junit.framework.Assert"/>
 <fullyQualifiedTypeName name="com.study.digitsum.utils.impl.InputConsoleReader"/>
+<fullyQualifiedTypeName name="org.apache.logging.log4j.Logger"/>
+<fullyQualifiedTypeName name="org.apache.logging.log4j.core.Logger"/>
+<fullyQualifiedTypeName name="org.apache.logging.log4j.LogManager"/>
+<fullyQualifiedTypeName name="com.study.digitsum.main.Calculator"/>
+<fullyQualifiedTypeName name="com.study.tune.util.InputFileReader"/>
+<fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Constructor"/>
+<fullyQualifiedTypeName name="com.study.tune.main.TuneRecordingProcessor"/>
+<fullyQualifiedTypeName name="org.apache.logging.log4j.Level"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.study.tune.entity.Tune"/>
+<fullyQualifiedTypeName name="com.study.tune.util.Constants"/>
+<fullyQualifiedTypeName name="com.study.tune.creator.TuneCreator"/>
+<fullyQualifiedTypeName name="com.study.tune.action.TuneListPopulator"/>
 </qualifiedTypeNameHistroy>

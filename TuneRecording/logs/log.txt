@@ -1,0 +1,4 @@
+2017-02-24 17:00:27 [main] WARN  com.study.tune.main.TuneRecordingProcessor - Wrong tune type was entered - MALEL
+2017-02-24 17:02:33 [main] WARN  com.study.tune.main.TuneRecordingProcessor - Wrong tune type was entered - MALEL
+2017-02-24 17:04:23 [main] WARN  com.study.tune.main.TuneRecordingProcessor - Wrong tune type was entered - MALEL
+2017-02-24 17:05:32 [main] WARN  com.study.tune.main.TuneRecordingProcessor - Wrong tune type was entered - MALEL

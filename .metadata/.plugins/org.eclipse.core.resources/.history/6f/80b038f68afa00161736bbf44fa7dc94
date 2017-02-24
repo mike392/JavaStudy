@@ -1,0 +1,12 @@
+package com.study.tune.action;
+
+import java.util.List;
+
+import com.study.tune.entity.Tune;
+
+public class TuneListDurationSorter {
+	public static List<Tune> sortListAsc(List<Tune> input){
+		input.sort(TuneDurationComparatorAsc<Tune>);
+		return input;
+	}
+}

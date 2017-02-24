@@ -1,0 +1,10 @@
+package com.study.tune.action;
+
+import com.study.tune.entity.Tune;
+
+public class TuneTypePopulator  {
+	
+	public static <T extends Tune> void populateTuneType(T input){
+		
+	}
+}

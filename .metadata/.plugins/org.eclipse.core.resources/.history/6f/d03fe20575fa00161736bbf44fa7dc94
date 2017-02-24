@@ -1,0 +1,54 @@
+package com.study.tune.action;
+
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
+
+import org.apache.logging.log4j.Level;
+
+import com.study.tune.entity.Tune;
+import com.study.tune.main.TuneRecordingProcessor;
+
+public class TuneTypePopulator  {
+	
+	public static <T extends Tune> void populateTuneType(T input, String value){
+		Object field = retrieveEnumField(input);
+		if (field == null){
+			if (isInt(value)){
+				Method method = retrieveSetter(input);
+			}
+		}
+	}
+
+	private static <T> Method retrieveSetter(T input) {
+		Method result = null;
+		Method[] methodList = input.getClass().getDeclaredMethods();
+		for (Method item : methodList){
+			if Modifier.isPublic(item.getModifiers()) && item.getParameterTypes().length > 0 && item.getName().matches("^set[A-Z].*")
+		}
+		return result;
+	}
+
+	private static <T> Object retrieveEnumField(T input) {
+		Object field = null;
+		Class<?> clazz = input.getClass();
+		Field[] fieldArray = clazz.getDeclaredFields();
+		for (Field item : fieldArray){
+			if (item.getType().isEnum()) {
+				field = item.getType();
+			}
+		} 
+		return field;
+	}
+	
+	private static boolean isInt(String input) {
+		boolean result = false;
+		try {
+			Integer.parseInt(input);
+			result = true;
+		} catch(NumberFormatException e){
+			TuneRecordingProcessor.logger.log(Level.WARN, "The input for tune type is not a number - " + input);
+		}
+		return result;
+	}
+}

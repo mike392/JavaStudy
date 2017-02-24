@@ -1,0 +1,2 @@
+Value for field instrumentAmount is 3 Value for field duration is 17.0 Value for field genre is POP 
+Value for field vocalType is MALE Value for field duration is 13.0 Value for field genre is ROCK 

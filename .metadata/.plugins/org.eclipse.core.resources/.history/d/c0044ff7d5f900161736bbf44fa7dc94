@@ -1,0 +1,23 @@
+package com.study.tune.util;
+
+import java.util.LinkedList;
+import java.util.List;
+
+import org.apache.logging.log4j.Level;
+
+import com.study.tune.main.TuneRecordingProcessor;
+
+public class InputValidator {
+	
+	public static List<String> getValidatedInput(List<String> input){
+		List<String> result = new LinkedList<String>();
+		for (String item : input){
+			if (item.split(Constants.COLUMN_DELIMITER).length == Constants.FIELDS_NUMBER){
+				result.add(item);
+			} else {
+				TuneRecordingProcessor.logger.log(Level.WARN, "Wrong amoung of input fields or wrong delimiters - " + item);
+			}
+		}
+		return result;	
+	}
+}

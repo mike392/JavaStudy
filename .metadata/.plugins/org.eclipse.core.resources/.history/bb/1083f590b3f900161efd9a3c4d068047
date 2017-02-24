@@ -1,0 +1,19 @@
+package com.study.tune.entity;
+
+public class Tune {
+	private double duration;
+	private double genre;
+	
+	public double getDuration() {
+		return duration;
+	}
+	public void setDuration(double duration) {
+		this.duration = duration;
+	}
+	public double getGenre() {
+		return genre;
+	}
+	public void setGenre(double genre) {
+		this.genre = genre;
+	}
+}

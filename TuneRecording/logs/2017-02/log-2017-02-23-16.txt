@@ -1,0 +1,19 @@
+2017-02-23 16:13:38 [main] WARN  com.study.tune.main.TuneRecordingProcessor - Wrong amoung of input fields or wrong delimiters - 
+2017-02-23 16:13:38 [main] WARN  com.study.tune.main.TuneRecordingProcessor - Wrong amoung of input fields or wrong delimiters -  -122.999 343  -34 444 dffsgdfgs 5464 
+2017-02-23 16:13:38 [main] WARN  com.study.tune.main.TuneRecordingProcessor - Wrong amoung of input fields or wrong delimiters -  
+2017-02-23 16:13:38 [main] WARN  com.study.tune.main.TuneRecordingProcessor - Wrong amoung of input fields or wrong delimiters -  
+2017-02-23 16:13:38 [main] WARN  com.study.tune.main.TuneRecordingProcessor - Wrong amoung of input fields or wrong delimiters -  
+2017-02-23 16:13:38 [main] WARN  com.study.tune.main.TuneRecordingProcessor - Wrong amoung of input fields or wrong delimiters -  трятя
+2017-02-23 16:13:38 [main] WARN  com.study.tune.main.TuneRecordingProcessor - Wrong amoung of input fields or wrong delimiters -  
+2017-02-23 16:13:38 [main] WARN  com.study.tune.main.TuneRecordingProcessor - Wrong amoung of input fields or wrong delimiters -  тря
+2017-02-23 16:13:38 [main] WARN  com.study.tune.main.TuneRecordingProcessor - Wrong amoung of input fields or wrong delimiters -  
+2017-02-23 16:13:38 [main] WARN  com.study.tune.main.TuneRecordingProcessor - Wrong amoung of input fields or wrong delimiters -  45
+2017-02-23 16:14:36 [main] WARN  com.study.tune.main.TuneRecordingProcessor - Wrong amoung of input fields or wrong delimiters - 
+2017-02-23 16:14:36 [main] WARN  com.study.tune.main.TuneRecordingProcessor - Wrong amoung of input fields or wrong delimiters - 
+2017-02-23 16:14:36 [main] WARN  com.study.tune.main.TuneRecordingProcessor - Wrong amoung of input fields or wrong delimiters - 
+2017-02-23 16:14:36 [main] WARN  com.study.tune.main.TuneRecordingProcessor - Wrong amoung of input fields or wrong delimiters - 
+2017-02-23 16:14:36 [main] WARN  com.study.tune.main.TuneRecordingProcessor - Wrong amoung of input fields or wrong delimiters - трятр 
+2017-02-23 16:14:36 [main] WARN  com.study.tune.main.TuneRecordingProcessor - Wrong amoung of input fields or wrong delimiters - трят
+2017-02-23 16:48:04 [main] ERROR com.study.tune.main.TuneRecordingProcessor - VocalTune
+2017-02-23 16:48:04 [main] ERROR com.study.tune.main.TuneRecordingProcessor - InstrumentalTune
+2017-02-23 16:48:04 [main] ERROR com.study.tune.main.TuneRecordingProcessor - ElectronicTune
