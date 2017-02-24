@@ -13,7 +13,7 @@ public class TuneCreator {
 	public static Object createTuneBasedOnType(String type){
 		Object result = new Object();
 		try {
-			Constructor<?> tuneConstructor = Class.forName(Constants.PACKAGE_NAME + type).getConstructor();
+			Constructor<?> tuneConstructor = Class.forName(Constants.PACKAGE_NAME + type.toUpperCase()).getConstructor();
 			result = tuneConstructor.newInstance();
 		} catch (NoSuchMethodException e) {
 			TuneRecordingProcessor.logger.log(Level.ERROR, e.getMessage());

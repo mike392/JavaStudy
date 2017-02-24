@@ -11,7 +11,7 @@ import com.study.tune.util.Constants;
 public class TuneCreator {
 	
 	public static Object createTuneBasedOnType(String type){
-		Object result = new Object();
+		Object result = null;
 		try {
 			Constructor<?> tuneConstructor = Class.forName(Constants.PACKAGE_NAME + type).getConstructor();
 			result = tuneConstructor.newInstance();
