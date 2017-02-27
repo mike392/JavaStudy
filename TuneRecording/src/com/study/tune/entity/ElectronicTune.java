@@ -14,9 +14,4 @@ public class ElectronicTune extends Tune {
 	public void setTuneType(TuneType tuneType) {
 		this.tuneType = tuneType;
 	}
-	
-/*	public String toString(){
-		return this.tuneType + super.;
-		
-	}*/
 }

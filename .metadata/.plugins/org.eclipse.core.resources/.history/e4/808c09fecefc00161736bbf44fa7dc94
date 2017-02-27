@@ -1,0 +1,12 @@
+package test.com.study.tune.main;
+
+import org.junit.runner.RunWith;
+import org.junit.runners.Suite;
+
+import test.com.study.tune.util.InputFileReaderTest;
+
+@Suite.SuiteClasses(value = { InputFileReaderTest.class })
+@RunWith(Suite.class)
+public class TuneRecordingProcessorTest {
+	
+}

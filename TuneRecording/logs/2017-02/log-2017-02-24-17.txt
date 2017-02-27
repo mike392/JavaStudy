@@ -1,0 +1,20 @@
+2017-02-24 17:00:27 [main] WARN  com.study.tune.main.TuneRecordingProcessor - Wrong tune type was entered - MALEL
+2017-02-24 17:02:33 [main] WARN  com.study.tune.main.TuneRecordingProcessor - Wrong tune type was entered - MALEL
+2017-02-24 17:04:23 [main] WARN  com.study.tune.main.TuneRecordingProcessor - Wrong tune type was entered - MALEL
+2017-02-24 17:05:32 [main] WARN  com.study.tune.main.TuneRecordingProcessor - Wrong tune type was entered - MALEL
+2017-02-24 17:44:46 [main] WARN  com.study.tune.main.TuneRecordingProcessor - Wrong tune type was entered - MALEL
+2017-02-24 17:44:59 [main] ERROR com.study.tune.main.TuneRecordingProcessor - There is no such class - VocalTune
+2017-02-24 17:45:26 [main] ERROR com.study.tune.main.TuneRecordingProcessor - There is no such class - VocalTune
+2017-02-24 17:48:30 [main] ERROR com.study.tune.main.TuneRecordingProcessor - There is no such class - VocalTune
+2017-02-24 17:48:30 [main] ERROR com.study.tune.main.TuneRecordingProcessor - Cannot cast Tune class type to - VocalTune
+2017-02-24 17:48:30 [main] ERROR com.study.tune.main.TuneRecordingProcessor - There is no such class - InstrumentalTune
+2017-02-24 17:48:30 [main] ERROR com.study.tune.main.TuneRecordingProcessor - Cannot cast Tune class type to - InstrumentalTune
+2017-02-24 17:48:30 [main] ERROR com.study.tune.main.TuneRecordingProcessor - There is no such class - ElectronicTune
+2017-02-24 17:48:30 [main] ERROR com.study.tune.main.TuneRecordingProcessor - Cannot cast Tune class type to - ElectronicTune
+2017-02-24 17:48:30 [main] ERROR com.study.tune.main.TuneRecordingProcessor - There is no such class - InstrumentalTune
+2017-02-24 17:48:30 [main] ERROR com.study.tune.main.TuneRecordingProcessor - Cannot cast Tune class type to - InstrumentalTune
+2017-02-24 17:48:30 [main] ERROR com.study.tune.main.TuneRecordingProcessor - There is no such class - VocalTune
+2017-02-24 17:48:30 [main] ERROR com.study.tune.main.TuneRecordingProcessor - Cannot cast Tune class type to - VocalTune
+2017-02-24 17:48:30 [main] ERROR com.study.tune.main.TuneRecordingProcessor - There is no such class - VocalTune
+2017-02-24 17:48:30 [main] ERROR com.study.tune.main.TuneRecordingProcessor - Cannot cast Tune class type to - VocalTune
+2017-02-24 17:49:17 [main] WARN  com.study.tune.main.TuneRecordingProcessor - Wrong tune type was entered - MALEL
