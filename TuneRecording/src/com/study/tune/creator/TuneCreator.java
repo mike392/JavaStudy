@@ -1,37 +1,18 @@
 package com.study.tune.creator;
 
-import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
-
-import org.apache.logging.log4j.Level;
-
-import com.study.tune.main.TuneRecordingProcessor;
-import com.study.tune.util.Constants;
+import com.study.tune.entity.Tune;
+import com.study.tune.entity.TuneEnum;
+import com.study.tune.util.WrongTuneTypeException;
 
 public class TuneCreator {
-	
-	public static Object createTuneBasedOnType(String type){
-		Object result = new Object();
+	public static Tune createTune(String tuneType) throws WrongTuneTypeException{
+		Object tune = new Object();
 		try {
-			Constructor<?> tuneConstructor = Class.forName(Constants.PACKAGE_NAME + type).getConstructor();
-			result = tuneConstructor.newInstance();
-		} catch (NoSuchMethodException e) {
-			TuneRecordingProcessor.logger.log(Level.ERROR, e.getMessage());
-		} catch (SecurityException e) {
-			TuneRecordingProcessor.logger.log(Level.ERROR, e.getMessage());
-		} catch (ClassNotFoundException e) {
-			TuneRecordingProcessor.logger.log(Level.ERROR, e.getMessage());
-		} catch (InstantiationException e) {
-			TuneRecordingProcessor.logger.log(Level.ERROR, e.getMessage());
-		} catch (IllegalAccessException e) {
-			TuneRecordingProcessor.logger.log(Level.ERROR, e.getMessage());
-		} catch (IllegalArgumentException e) {
-			TuneRecordingProcessor.logger.log(Level.ERROR, e.getMessage());
-		} catch (InvocationTargetException e) {
-			TuneRecordingProcessor.logger.log(Level.ERROR, e.getMessage());
-		} catch (NoClassDefFoundError e) {
-			TuneRecordingProcessor.logger.log(Level.ERROR, "There is no such class - " + type);
+			TuneEnum abstractTune = TuneEnum.valueOf(tuneType);
+			tune = abstractTune.getTune().getClass().newInstance();
+		} catch (InstantiationException | IllegalAccessException | IllegalArgumentException e){
+			throw new WrongTuneTypeException(e);
 		}
-		return result;
+		return (Tune) tune;
 	}
 }

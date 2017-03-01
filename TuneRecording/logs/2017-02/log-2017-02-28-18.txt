@@ -1,0 +1,13 @@
+2017-02-28 18:16:44 [main] ERROR com.study.tune.main.TuneRecordingProcessor - Wrong tune type supplied - dVocal
+2017-02-28 18:18:03 [main] ERROR com.study.tune.main.TuneRecordingProcessor - Wrong tune type supplied - dVocal
+2017-02-28 18:18:42 [main] ERROR com.study.tune.main.TuneRecordingProcessor - Wrong tune type supplied - dVocal
+2017-02-28 18:19:00 [main] ERROR com.study.tune.main.TuneRecordingProcessor - Wrong tune type supplied - dVocal
+2017-02-28 18:22:10 [main] ERROR com.study.tune.main.TuneRecordingProcessor - Wrong tune type supplied - dVocal
+2017-02-28 18:24:53 [main] ERROR com.study.tune.main.TuneRecordingProcessor - Wrong tune type supplied - dVocal
+2017-02-28 18:27:19 [main] ERROR com.study.tune.main.TuneRecordingProcessor - Wrong tune type supplied - dVocal
+2017-02-28 18:30:07 [main] ERROR com.study.tune.main.TuneRecordingProcessor - Wrong tune type supplied - dVocal
+2017-02-28 18:34:10 [main] ERROR com.study.tune.main.TuneRecordingProcessor - Wrong tune type supplied - dVocal
+2017-02-28 18:34:27 [main] ERROR com.study.tune.main.TuneRecordingProcessor - Wrong tune type supplied - dVocal
+2017-02-28 18:37:33 [main] ERROR com.study.tune.main.TuneRecordingProcessor - Wrong tune type supplied - dVocal
+2017-02-28 18:42:08 [main] ERROR com.study.tune.main.TuneRecordingProcessor - Wrong tune type supplied - dVocal
+2017-02-28 18:53:17 [main] ERROR com.study.tune.main.TuneRecordingProcessor - Wrong tune type supplied - dVocal

@@ -1,0 +1,20 @@
+package com.study.tune.entity;
+
+import org.apache.commons.lang3.EnumUtils;
+
+public class ElectronicTune extends Tune {
+	private ElectronicTuneType tuneType;
+
+	public ElectronicTuneType getTuneType() {
+		return tuneType;
+	}
+
+	public void setTuneType(ElectronicTuneType tuneType) {
+		this.tuneType = tuneType;
+	}
+
+	@Override
+	public boolean isValidTuneType(String type) {
+		return EnumUtils.isValidEnum(ElectronicTuneType.class, type);
+	}
+}

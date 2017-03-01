@@ -11,4 +11,19 @@ public class InstrumentalTune extends Tune {
 		this.instrumentAmount = instrumentAmount;
 	}
 
+	@Override
+	public void setDefaultTuneType() {
+		this.instrumentAmount = 0;
+	}
+
+	@Override
+	public Object getTuneType() {
+		return instrumentAmount;
+	}
+
+	@Override
+	public void setTuneType(String tuneType) {
+		instrumentAmount = Integer.parseInt(tuneType);		
+	}
+
 }

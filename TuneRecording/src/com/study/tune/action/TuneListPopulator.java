@@ -6,22 +6,28 @@ import org.apache.logging.log4j.Level;
 
 import com.study.tune.creator.TuneCreator;
 import com.study.tune.entity.Tune;
-import com.study.tune.entity.TuneGenre;
+import com.study.tune.entity.TuneEnum;
+import com.study.tune.entity.TuneGenreEnum;
 import com.study.tune.main.TuneRecordingProcessor;
 import com.study.tune.util.Constants;
+import com.study.tune.util.WrongTuneTypeException;
 
 public class TuneListPopulator {
 	public static void populateTuneListGivenInput(List<String> input){
 		for (String item : input){
 			String[] tuneParam = item.split(Constants.COLUMN_DELIMITER);
 			try {
-			Tune tune = (Tune) TuneCreator.createTuneBasedOnType(tuneParam[0]);
-			tune.setDuration(Double.parseDouble(tuneParam[1].toUpperCase()));
-			tune.setGenre(TuneGenre.valueOf(tuneParam[2].toUpperCase()));
-			TuneTypePopulator.populateTuneType(tune, tuneParam[3].toUpperCase());
-			TuneList.addTune(tune);
-			} catch (ClassCastException e) {
-				TuneRecordingProcessor.logger.log(Level.ERROR, "Cannot cast Tune class type to - " + tuneParam[0]);
+				Tune tune = TuneCreator.createTune(tuneParam[0].toUpperCase());
+				tune.setDuration(Double.parseDouble(tuneParam[1].toUpperCase()));
+				tune.setGenre(TuneGenreEnum.valueOf(tuneParam[2].toUpperCase()));
+				if (TuneEnum.valueOf(tuneParam[0].toUpperCase()).isValidTuneType(tuneParam[3].toUpperCase())){
+					tune.setTuneType(tuneParam[3].toUpperCase());
+				} else {
+					tune.setDefaultTuneType();
+				}
+				TuneList.addTune(tune);
+			} catch (WrongTuneTypeException e) {
+				TuneRecordingProcessor.logger.log(Level.ERROR, "Wrong tune type supplied - " + tuneParam[0]);
 			}
 		}
 	}

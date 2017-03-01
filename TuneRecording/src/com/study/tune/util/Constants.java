@@ -9,7 +9,7 @@ public class Constants {
 	public static final int FIELDS_NUMBER = 4;
 	public static final String PACKAGE_NAME = "com.study.tune.entity.";
 	public static final String MISSING_ENUM_VALUE = "NONE";
-	public static final double DURATION_LOWER_BORDER = 12.5;
-	public static final double DURATION_UPPER_BORDER = 18;
+	public static final double DURATION_LOWER_BORDER = 1;
+	public static final double DURATION_UPPER_BORDER = 30;
 
 }

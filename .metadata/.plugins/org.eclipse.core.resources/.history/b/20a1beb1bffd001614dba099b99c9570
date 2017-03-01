@@ -1,0 +1,30 @@
+package com.study.tune.entity;
+
+public class ElectronicTune extends Tune {
+	private TuneType tuneType;
+
+	public static enum TuneType {
+		FAST, SLOW, NONE
+	}
+	
+	public ElectronicTune(){
+		
+	}
+	
+	public ElectronicTune(TuneType type){
+		this.tuneType = type;
+	}
+	
+	public TuneType getTuneType() {
+		return tuneType;
+	}
+
+	public void setTuneType(TuneType tuneType) {
+		this.tuneType = tuneType;
+	}
+
+	@Override
+	public void setDefaultTuneType() {
+		this.tuneType = TuneType.NONE;
+	}
+}

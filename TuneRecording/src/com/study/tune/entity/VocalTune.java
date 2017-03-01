@@ -7,11 +7,19 @@ public class VocalTune extends Tune {
 		MALE, FEMALE, NONE
 	}
 	
-	public VocalType getVocalType() {
+	@Override
+	public VocalType getTuneType() {
 		return vocalType;
 	}
 
-	public void setVocalType(VocalType vocalType) {
-		this.vocalType = vocalType;
+	@Override
+	public void setDefaultTuneType() {
+		this.vocalType = VocalType.NONE;
 	}
+
+	@Override
+	public void setTuneType(String tuneType) {
+		this.vocalType = VocalType.valueOf(tuneType);
+	}
+
 }

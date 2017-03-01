@@ -1,0 +1,40 @@
+package com.study.tune.entity;
+
+import org.apache.commons.lang3.EnumUtils;
+
+public enum TuneEnum {
+	ELECTRONIC(new ElectronicTune()) {
+		@Override
+		boolean isValidEnumElement(String type) {
+			return EnumUtils.isValidEnum(ElectronicTune.TuneType(), type);
+		}
+	},
+	INSTRUMENTAL(new InstrumentalTune()) {
+		@Override
+		boolean isValidEnumElement(String type) {
+			// TODO Auto-generated method stub
+			
+		}
+	},
+	VOCAL(new VocalTune()) {
+		@Override
+		boolean isValidEnumElement(String type) {
+			// TODO Auto-generated method stub
+			
+		}
+	};
+	
+	private Tune tune;
+	
+	private TuneEnum(Tune tune){
+		this.setTune(tune);
+	}
+	abstract boolean isValidEnumElement(String type);
+	public Tune getTune() {
+		return tune;
+	}
+
+	public void setTune(Tune tune) {
+		this.tune = tune;
+	}
+}

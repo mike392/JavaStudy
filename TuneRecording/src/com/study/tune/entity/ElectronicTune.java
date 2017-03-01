@@ -3,7 +3,7 @@ package com.study.tune.entity;
 public class ElectronicTune extends Tune {
 	private TuneType tuneType;
 
-	public enum TuneType {
+	public static enum TuneType {
 		FAST, SLOW, NONE
 	}
 	
@@ -11,7 +11,13 @@ public class ElectronicTune extends Tune {
 		return tuneType;
 	}
 
-	public void setTuneType(TuneType tuneType) {
-		this.tuneType = tuneType;
+	@Override
+	public void setDefaultTuneType() {
+		this.tuneType = TuneType.NONE;
+	}
+
+	@Override
+	public void setTuneType(String tuneType) {
+		this.tuneType = TuneType.valueOf(tuneType);
 	}
 }

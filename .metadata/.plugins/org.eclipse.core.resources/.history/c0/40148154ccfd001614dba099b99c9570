@@ -1,0 +1,18 @@
+package com.study.tune.creator;
+
+import com.study.tune.entity.Tune;
+import com.study.tune.entity.TuneEnum;
+import com.study.tune.util.WrongTuneTypeException;
+
+public class TuneCreator {
+	public static Tune createTune(String tuneType) throws WrongTuneTypeException{
+		Tune tune = null;
+		try {
+			TuneEnum abstractTune = new TuneEnum.valueOf(tuneType);
+			tune = abstractTune.getTune();
+		} catch (IllegalArgumentException e){
+			throw new WrongTuneTypeException(e);
+		}
+		return tune;
+	}
+}

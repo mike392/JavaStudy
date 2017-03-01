@@ -1,0 +1,21 @@
+package com.study.tune.entity;
+
+public enum TuneEnum {
+	ELECTRONIC(new ElectronicTune()),
+	INSTRUMENTAL(new InstrumentalTune()),
+	VOCAL(new VocalTune()); 
+	
+	private Tune tune;
+	
+	private TuneEnum(Tune tune){
+		this.setTune(tune);
+	}
+	abstract boolean isValidTuneType(String type);
+	public Tune getTune() {
+		return tune;
+	}
+
+	public void setTune(Tune tune) {
+		this.tune = tune;
+	}
+}

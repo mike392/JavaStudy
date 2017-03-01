@@ -5,9 +5,6 @@ import java.io.FileNotFoundException;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
-
-import org.apache.logging.log4j.Level;
-
 import com.study.tune.util.Constants;
 import com.study.tune.util.InputValidator;
 import com.study.tune.main.TuneRecordingProcessor;
@@ -22,9 +19,9 @@ public class InputFileReader {
 				inputArgs.add(scanner.next());
 			}
 		} catch (FileNotFoundException e) {
-			TuneRecordingProcessor.logger.log(Level.ERROR, "No file was found following the path - " + Constants.INPUT_PATH);
-			TuneRecordingProcessor.logger.log(Level.ERROR, e.getMessage());
-		}
+			TuneRecordingProcessor.logger.fatal("There is no file in the path - " + Constants.INPUT_PATH);
+			throw new RuntimeException(e);
+		} 
 		List<String> result = InputValidator.getValidatedInput(inputArgs);
 		return result;
 	}
