@@ -3,6 +3,8 @@ package com.study.tune.action;
 import java.util.List;
 
 import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import com.study.tune.creator.TuneCreator;
 import com.study.tune.entity.Tune;
@@ -13,6 +15,7 @@ import com.study.tune.util.Constants;
 import com.study.tune.util.WrongTuneTypeException;
 
 public class TuneListPopulator {
+	static Logger logger = LogManager.getLogger(TuneListPopulator.class);
 	public static void populateTuneListGivenInput(List<String> input){
 		for (String item : input){
 			String[] tuneParam = item.split(Constants.COLUMN_DELIMITER);
@@ -27,7 +30,7 @@ public class TuneListPopulator {
 				}
 				TuneList.addTune(tune);
 			} catch (WrongTuneTypeException e) {
-				TuneRecordingProcessor.logger.log(Level.ERROR, "Wrong tune type supplied - " + tuneParam[0]);
+				logger.log(Level.ERROR, "Wrong tune type supplied - " + tuneParam[0]);
 			}
 		}
 	}

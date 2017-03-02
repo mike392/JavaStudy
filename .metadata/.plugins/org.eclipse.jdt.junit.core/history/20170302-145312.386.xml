@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TuneRecordingProcessorTest" project="TuneRecording" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="test.com.study.tune.main.TuneRecordingProcessorTest" time="0.37">
+    <testsuite name="test.com.study.tune.util.InputFileReaderTest" time="0.33">
+      <testcase name="readInputNegativeTest" classname="test.com.study.tune.util.InputFileReaderTest" time="0.33"/>
+    </testsuite>
+    <testsuite name="test.com.study.tune.action.TuneListPopulatorTest" time="0.017">
+      <testcase name="populateTuneListGivenInputTest" classname="test.com.study.tune.action.TuneListPopulatorTest" time="0.017"/>
+    </testsuite>
+    <testsuite name="test.com.study.tune.action.TuneListGenreSorterTest" time="0.023">
+      <testcase name="sortListAscTest" classname="test.com.study.tune.action.TuneListGenreSorterTest" time="0.023"/>
+    </testsuite>
+  </testsuite>
+</testrun>

@@ -1,6 +1,12 @@
-Duration of ElectronicTune is - 12.0 Genre of tune is - RAP and the tune type is FAST
-Duration of InstrumentalTune is - 17.0 Genre of tune is - POP and the tune type is 3
-Duration of InstrumentalTune is - 12.0 Genre of tune is - POP and the tune type is 4
 Duration of VocalTune is - 23.0 Genre of tune is - ROCK and the tune type is FEMALE
 Duration of VocalTune is - 13.0 Genre of tune is - ROCK and the tune type is MALE
 Duration of VocalTune is - 12.0 Genre of tune is - ROCK and the tune type is NONE
+Duration of VocalTune is - 23.0 Genre of tune is - ROCK and the tune type is FEMALE
+Duration of VocalTune is - 13.0 Genre of tune is - ROCK and the tune type is MALE
+Duration of VocalTune is - 12.0 Genre of tune is - ROCK and the tune type is NONE
+Duration of InstrumentalTune is - 17.0 Genre of tune is - POP and the tune type is 3
+Duration of InstrumentalTune is - 12.0 Genre of tune is - POP and the tune type is 4
+Duration of InstrumentalTune is - 17.0 Genre of tune is - POP and the tune type is 3
+Duration of InstrumentalTune is - 12.0 Genre of tune is - POP and the tune type is 4
+Duration of ElectronicTune is - 12.0 Genre of tune is - RAP and the tune type is FAST
+Duration of ElectronicTune is - 12.0 Genre of tune is - RAP and the tune type is FAST

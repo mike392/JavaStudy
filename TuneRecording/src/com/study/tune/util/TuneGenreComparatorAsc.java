@@ -8,6 +8,6 @@ public class TuneGenreComparatorAsc implements Comparator<Tune>{
 
 	@Override
 	public int compare(Tune arg0, Tune arg1) {
-		return arg1.getGenre().compareTo(arg0.getGenre());
+		return arg0.getGenre().compareTo(arg1.getGenre());
 	}
 }

@@ -9,7 +9,7 @@ import com.study.tune.util.InputFileReader;
 
 public class InputFileReaderTest {
 	@Test
-	public void readInputNegativeTest(){
+	public void readInputPositiveTest(){
 		List<String> input = InputFileReader.readInput();
 		Assert.assertFalse(input.isEmpty());
 	}

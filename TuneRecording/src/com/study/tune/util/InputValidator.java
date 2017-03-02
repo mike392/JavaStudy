@@ -4,12 +4,14 @@ import java.util.LinkedList;
 import java.util.List;
 import org.apache.commons.lang3.EnumUtils;
 import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import com.study.tune.entity.TuneGenreEnum;
 import com.study.tune.main.TuneRecordingProcessor;
 
 public class InputValidator {
-	
+	static Logger logger = LogManager.getLogger(InputValidator.class);
 	public static List<String> getValidatedInput(List<String> input){
 		List<String> result = new LinkedList<String>();
 		for (String item : input){
@@ -17,7 +19,7 @@ public class InputValidator {
 				if (isInputItemValid(item))
 					result.add(item.trim());
 			} else {
-				TuneRecordingProcessor.logger.log(Level.WARN, "Wrong amoung of input fields or wrong delimiters - " + item);
+				logger.log(Level.WARN, "Wrong amoung of input fields or wrong delimiters - " + item);
 			}
 		}
 		return result;	
@@ -38,7 +40,7 @@ public class InputValidator {
 			Double.parseDouble(input);
 			result = true;
 		} catch(NumberFormatException e){
-			TuneRecordingProcessor.logger.log(Level.WARN, "The input is not a number - " + input);
+			logger.log(Level.WARN, "The input is not a number - " + input);
 		}
 		return result;
 	}
@@ -48,7 +50,7 @@ public class InputValidator {
 		if (EnumUtils.isValidEnum(TuneGenreEnum.class, input.toUpperCase())){
 			result = true;
 		} else {
-			TuneRecordingProcessor.logger.log(Level.WARN, "The input has wrong genre - " + input);
+			logger.log(Level.WARN, "The input has wrong genre - " + input);
 		}
 		return result;
 	}

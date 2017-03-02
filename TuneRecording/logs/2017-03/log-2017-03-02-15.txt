@@ -1,0 +1,7 @@
+2017-03-02 15:23:36 [main] ERROR com.study.tune.action.TuneListPopulator - Wrong tune type supplied - dVocal
+2017-03-02 15:24:21 [main] ERROR com.study.tune.action.TuneListPopulator - Wrong tune type supplied - dVocal
+2017-03-02 15:26:02 [main] ERROR com.study.tune.action.TuneListPopulator - Wrong tune type supplied - dVocal
+2017-03-02 15:32:24 [main] ERROR com.study.tune.action.TuneListPopulator - Wrong tune type supplied - dVocal
+2017-03-02 15:32:24 [main] ERROR com.study.tune.action.TuneListPopulator - Wrong tune type supplied - dVocal
+2017-03-02 15:33:06 [main] ERROR com.study.tune.action.TuneListPopulator - Wrong tune type supplied - dVocal
+2017-03-02 15:33:06 [main] ERROR com.study.tune.action.TuneListPopulator - Wrong tune type supplied - dVocal

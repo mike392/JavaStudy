@@ -2,10 +2,13 @@ package com.study.tune.entity;
 
 import org.apache.commons.lang3.EnumUtils;
 import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import com.study.tune.main.TuneRecordingProcessor;
 
 public enum TuneEnum {
+	
 	ELECTRONIC(new ElectronicTune()) {
 		@Override
 		public boolean isValidTuneType(String type) {
@@ -28,7 +31,7 @@ public enum TuneEnum {
 			return EnumUtils.isValidEnum(VocalTune.VocalType.class, type);
 		}
 	}; 
-	
+	static Logger logger = LogManager.getLogger(TuneEnum.class);
 	private Tune tune;
 	
 	private TuneEnum(Tune tune){
@@ -50,7 +53,7 @@ public enum TuneEnum {
 			Integer.parseInt(type);
 			result = true;
 		} catch (NumberFormatException e) {
-			TuneRecordingProcessor.logger.log(Level.ERROR, "Cannot convert Instrument tune type to int - " + type);
+			logger.log(Level.ERROR, "Cannot convert Instrument tune type to int - " + type);
 		}
 		return result;
 	}

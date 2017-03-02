@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TuneRecordingProcessorTest" project="TuneRecording" tests="6" started="6" failures="0" errors="0" ignored="0">
+  <testsuite name="test.com.study.tune.main.TuneRecordingProcessorTest" time="0.359">
+    <testsuite name="test.com.study.tune.util.InputFileReaderTest" time="0.295">
+      <testcase name="readInputPositiveTest" classname="test.com.study.tune.util.InputFileReaderTest" time="0.295"/>
+    </testsuite>
+    <testsuite name="test.com.study.tune.action.TuneListPopulatorTest" time="0.01">
+      <testcase name="populateTuneListGivenInputTest" classname="test.com.study.tune.action.TuneListPopulatorTest" time="0.01"/>
+    </testsuite>
+    <testsuite name="test.com.study.tune.action.TuneListGenreSorterTest" time="0.004">
+      <testcase name="sortListAscTest" classname="test.com.study.tune.action.TuneListGenreSorterTest" time="0.004"/>
+    </testsuite>
+    <testsuite name="test.com.study.tune.util.TuneWithinDurationRangeFinderTest" time="0.046">
+      <testcase name="findTuneListWithinGivenRangePositiveTest" classname="test.com.study.tune.util.TuneWithinDurationRangeFinderTest" time="0.044"/>
+      <testcase name="findTuneListWithinGivenRangeNegativeTest" classname="test.com.study.tune.util.TuneWithinDurationRangeFinderTest" time="0.002"/>
+    </testsuite>
+    <testsuite name="test.com.study.tune.action.ReportPrinterTest" time="0.004">
+      <testcase name="printReportTest" classname="test.com.study.tune.action.ReportPrinterTest" time="0.004"/>
+    </testsuite>
+  </testsuite>
+</testrun>
