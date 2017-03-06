@@ -1,5 +1,0 @@
-package com.study.tune.entity;
-
-public class InstrumentalTune extends Tune {
-
-}
