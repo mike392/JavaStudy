@@ -2,10 +2,9 @@ package com.study.disassembler.parser;
 
 import java.util.regex.Pattern;
 
-public class AbstractParser{
+public abstract class AbstractParser{
 	private TextComponentParser successor;
 	private Pattern pattern;
-	private String startSymbol;
 	private String endSymbol;
 
 	public TextComponentParser getSuccessor() {
@@ -22,14 +21,6 @@ public class AbstractParser{
 
 	public void setPattern(Pattern pattern) {
 		this.pattern = pattern;
-	}
-
-	public String getStartSymbol() {
-		return startSymbol;
-	}
-
-	public void setStartSymbol(String startSymbol) {
-		this.startSymbol = startSymbol;
 	}
 
 	public String getEndSymbol() {

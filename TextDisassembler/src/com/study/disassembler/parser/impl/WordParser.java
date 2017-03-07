@@ -11,7 +11,6 @@ public class WordParser extends AbstractParser implements TextComponentParser {
 
 	public WordParser(){
 		setPattern(Pattern.compile(Constants.WORD_PATTERN));
-		setStartSymbol(Constants.STANDARD_START_END_SYMBOL);
 		setEndSymbol(Constants.STANDARD_START_END_SYMBOL);
 	}
 	@Override

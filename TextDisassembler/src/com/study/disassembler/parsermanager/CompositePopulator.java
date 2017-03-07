@@ -17,6 +17,7 @@ public class CompositePopulator {
 		while(matcher.find()){
 			TextComponent component = new TextComposite();
 			if (parser.hasSuccesor()) {
+				component.setDelimiter(((AbstractParser) parser).getEndSymbol());
 				compositeObject.addComponent(component);
 				populateCompositeObject(matcher.group(2), parser.getSuccessor(), component);
 				} else {

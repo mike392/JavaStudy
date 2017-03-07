@@ -10,6 +10,7 @@ public class SymbolParser extends AbstractParser implements TextComponentParser 
 
 	public SymbolParser(){
 		setPattern(Pattern.compile(Constants.SYMBOL_PATTERN));
+
 	}
 	@Override
 	public TextComponentParser getSuccessor() {

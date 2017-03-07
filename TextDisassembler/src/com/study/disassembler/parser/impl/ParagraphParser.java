@@ -11,7 +11,6 @@ public class ParagraphParser extends AbstractParser implements TextComponentPars
 
 	public ParagraphParser(){
 		setPattern(Pattern.compile(Constants.PARAGRAPH_PATTERN));
-		setStartSymbol(Constants.PARAGRAPH_START_END_SYMBOL);
 		setEndSymbol(Constants.PARAGRAPH_START_END_SYMBOL);
 	}
 	@Override

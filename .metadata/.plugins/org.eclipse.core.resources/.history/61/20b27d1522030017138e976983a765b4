@@ -1,0 +1,19 @@
+package com.study.disassembler.parsermanager;
+
+import com.study.disassembler.composite.TextComponent;
+import com.study.disassembler.composite.TextComposite;
+
+public class TextAssembler {
+
+	public static String composeText(TextComponent component, String input){
+		StringBuilder result = new StringBuilder();
+		if (component instanceof TextComposite) {
+			for (TextComponent innerComponent : ((TextComposite) component).getComponents()){
+				composeText(innerComponent, result.toString());
+			}
+		}
+		result.append(component.toString());
+		return result.toString();
+	}
+	
+}

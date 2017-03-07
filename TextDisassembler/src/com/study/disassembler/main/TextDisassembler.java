@@ -16,7 +16,7 @@ public class TextDisassembler {
 		ParserEnum item = ParserEnum.valueOf(Constants.TOP_LEVEL_PARSER);
 		TextComponentParser parser = item.getParser();
 		handler.setCompositeTextObject(CompositePopulator.populateCompositeObject(input, parser, handler.getCompositeTextObject()));
-		System.out.println("1");
+		System.out.println(handler.getCompositeTextObject().toString());
 	}
 
 }

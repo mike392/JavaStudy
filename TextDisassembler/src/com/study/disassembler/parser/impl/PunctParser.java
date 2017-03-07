@@ -11,8 +11,6 @@ public class PunctParser extends AbstractParser implements TextComponentParser {
 
 	public PunctParser(){
 		setPattern(Pattern.compile(Constants.PUNCT_PATTERN));
-		setStartSymbol("");
-		setEndSymbol("");
 	}
 	@Override
 	public TextComponentParser getSuccessor() {
