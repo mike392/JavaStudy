@@ -1,0 +1,16 @@
+package com.study.disassembler.composite;
+
+public class TextLeafElement extends TextComponent {
+	private char textItem;
+	@Override
+	public String toString() {
+		return String.valueOf(textItem);
+	}
+	public char getTextItem() {
+		return textItem;
+	}
+	public void setTextItem(char textItem) {
+		this.textItem = textItem;
+	}
+
+}

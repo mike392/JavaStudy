@@ -1,7 +1,8 @@
 package com.study.disassembler.parser;
 
 public interface TextComponentParser {
-	public abstract boolean hasSuccesor();
+	public default boolean hasSuccesor(){
+		return (getSuccessor() != null) ? true : false;
+		};
 	public abstract TextComponentParser getSuccessor();
-	public abstract String parseTextComponent(String component);
 }

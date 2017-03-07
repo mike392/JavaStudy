@@ -1,0 +1,15 @@
+package com.study.disassembler.parser.impl;
+
+import com.study.disassembler.parser.TextComponentParser;
+
+import AbstractParser;
+
+public class PunctParser extends AbstractParser implements TextComponentParser {
+
+	@Override
+	public TextComponentParser getSuccessor() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,20 @@
+package com.study.disassembler.parser.impl;
+
+import com.study.disassembler.parser.AbstractParser;
+import com.study.disassembler.parser.TextComponentParser;
+
+public class ParagraphParser extends AbstractParser implements TextComponentParser {
+
+	@Override
+	public TextComponentParser getSuccessor() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String parseTextComponent(String component) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

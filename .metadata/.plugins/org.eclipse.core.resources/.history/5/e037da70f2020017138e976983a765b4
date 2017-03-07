@@ -1,0 +1,5 @@
+package com.study.disassembler.composite;
+
+public class TextCompositeHandler {
+
+}

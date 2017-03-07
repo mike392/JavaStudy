@@ -2,28 +2,22 @@ package com.study.disassembler.parser.impl;
 
 import java.util.regex.Pattern;
 
+import com.study.disassembler.parser.AbstractParser;
+import com.study.disassembler.parser.ParserEnum;
 import com.study.disassembler.parser.TextComponentParser;
 import com.study.disassembler.util.Constants;
 
-public class WordParser implements TextComponentParser {
+public class WordParser extends AbstractParser implements TextComponentParser {
 
-	@Override
-	public boolean hasSuccesor() {
-		// TODO Auto-generated method stub
-		return false;
+	public WordParser(){
+		setPattern(Pattern.compile(Constants.WORD_PATTERN));
+		setStartSymbol(Constants.STANDARD_START_END_SYMBOL);
+		setEndSymbol(Constants.STANDARD_START_END_SYMBOL);
 	}
-
 	@Override
 	public TextComponentParser getSuccessor() {
 		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public String parseTextComponent(String component) {
-		// TODO Auto-generated method stub
-		Pattern pt = Pattern.compile(Constants.WORD_PATTERN);
-		return pt.matcher(component).group(2);
+		return ParserEnum.SYMBOL.getParser();
 	}
 
 }

@@ -12,10 +12,18 @@ public class TextComposite extends TextComponent {
 	public void setComponents(ArrayList<TextComponent> components) {
 		this.components = components;
 	}
+	
+	public void addComponent(TextComponent component){
+		components.add(component);
+	}
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return null;
+		StringBuilder result = new StringBuilder(getStartSymbol());
+		for (TextComponent component : components){
+			result.append(component.toString()); 
+		}
+		result.append(getEndSymbol());
+		return result.toString();
 	}
 }

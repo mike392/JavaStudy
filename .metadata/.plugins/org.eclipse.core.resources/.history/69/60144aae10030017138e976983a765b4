@@ -1,0 +1,8 @@
+package com.study.disassembler.parser.impl;
+
+import com.study.disassembler.parser.AbstractParser;
+import com.study.disassembler.parser.TextComponentParser;
+
+public class CharacterParser extends AbstractParser implements TextComponentParser {
+
+}

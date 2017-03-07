@@ -1,11 +1,18 @@
 package com.study.disassembler.composite;
 
 public class TextLeafElement extends TextComponent {
-
+	private String textItem;
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return null;
+		return textItem;
+	}
+
+	public void setTextItem(String string) {
+		this.textItem = string;
+	}
+	@Override
+	public void addComponent(TextComponent component) {
+		throw new UnsupportedOperationException();
 	}
 
 }
