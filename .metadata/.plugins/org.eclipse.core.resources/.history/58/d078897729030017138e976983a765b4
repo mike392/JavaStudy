@@ -1,6 +1,7 @@
 package com.study.disassembler.parser;
 
 import com.study.disassembler.parser.impl.SymbolParser;
+import com.study.disassembler.parser.impl.CharacterParser;
 import com.study.disassembler.parser.impl.ParagraphParser;
 import com.study.disassembler.parser.impl.PunctParser;
 import com.study.disassembler.parser.impl.SentenceParser;
@@ -8,6 +9,7 @@ import com.study.disassembler.parser.impl.WordParser;
 
 public enum ParserEnum {
 	PUNCT(new PunctParser()),
+	CHARACTER(new CharacterParser()),
 	SYMBOL(new SymbolParser()),
 	WORD(new WordParser()),
 	SENTENCE(new SentenceParser()),

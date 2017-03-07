@@ -8,15 +8,16 @@ import com.study.disassembler.parser.TextComponentParser;
 import com.study.disassembler.util.Constants;
 import com.study.disassembler.util.RegExp;
 
-public class ParagraphParser extends AbstractParser implements TextComponentParser {
+public class WordParser extends AbstractParser implements TextComponentParser {
 
-	public ParagraphParser(){
-		setPattern(Pattern.compile(RegExp.PARAGRAPH_PATTERN));
-		setEndSymbol(Constants.PARAGRAPH_START_END_SYMBOL);
+	public WordParser(){
+		setPattern(Pattern.compile(RegExp.WORD_PATTERN));
+		//setEndSymbol(Constants.STANDARD_START_END_SYMBOL);
 	}
 	@Override
 	public TextComponentParser getSuccessor() {
 		// TODO Auto-generated method stub
-		return ParserEnum.SENTENCE.getParser();
+		return ParserEnum.SYMBOL.getParser();
 	}
+
 }

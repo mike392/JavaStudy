@@ -6,12 +6,11 @@ import com.study.disassembler.parser.AbstractParser;
 import com.study.disassembler.parser.ParserEnum;
 import com.study.disassembler.parser.TextComponentParser;
 import com.study.disassembler.util.Constants;
-import com.study.disassembler.util.RegExp;
 
 public class ParagraphParser extends AbstractParser implements TextComponentParser {
 
 	public ParagraphParser(){
-		setPattern(Pattern.compile(RegExp.PARAGRAPH_PATTERN));
+		setPattern(Pattern.compile(Constants.PARAGRAPH_PATTERN));
 		setEndSymbol(Constants.PARAGRAPH_START_END_SYMBOL);
 	}
 	@Override

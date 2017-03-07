@@ -25,6 +25,6 @@ public class TextComposite extends TextComponent {
 		}
 		result = new StringBuilder(result.toString().trim());
 		result.append((getDelimiter() == null) ? "" : getDelimiter());
-		return result.toString();
+		return result.toString().trim();
 	}
 }

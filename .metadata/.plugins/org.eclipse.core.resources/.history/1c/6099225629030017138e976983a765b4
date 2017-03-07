@@ -6,17 +6,17 @@ import com.study.disassembler.parser.AbstractParser;
 import com.study.disassembler.parser.ParserEnum;
 import com.study.disassembler.parser.TextComponentParser;
 import com.study.disassembler.util.Constants;
-import com.study.disassembler.util.RegExp;
 
-public class ParagraphParser extends AbstractParser implements TextComponentParser {
+public class SentenceParser extends AbstractParser implements TextComponentParser {
 
-	public ParagraphParser(){
-		setPattern(Pattern.compile(RegExp.PARAGRAPH_PATTERN));
-		setEndSymbol(Constants.PARAGRAPH_START_END_SYMBOL);
+	public SentenceParser(){
+		setPattern(Pattern.compile(Constants.SENTENCE_PATTERN));
+		setEndSymbol(Constants.STANDARD_START_END_SYMBOL);
 	}
+
 	@Override
 	public TextComponentParser getSuccessor() {
-		// TODO Auto-generated method stub
-		return ParserEnum.SENTENCE.getParser();
+		return ParserEnum.WORD.getParser();
 	}
+
 }

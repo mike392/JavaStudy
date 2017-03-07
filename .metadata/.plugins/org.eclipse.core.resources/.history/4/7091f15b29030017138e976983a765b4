@@ -1,7 +1,7 @@
 package com.study.disassembler.parser.impl;
 
 import com.study.disassembler.parser.TextComponentParser;
-import com.study.disassembler.util.RegExp;
+import com.study.disassembler.util.Constants;
 
 import java.util.regex.Pattern;
 
@@ -10,7 +10,7 @@ import com.study.disassembler.parser.AbstractParser;
 public class PunctParser extends AbstractParser implements TextComponentParser {
 
 	public PunctParser(){
-		setPattern(Pattern.compile(RegExp.PUNCT_PATTERN));
+		setPattern(Pattern.compile(Constants.PUNCT_PATTERN));
 	}
 	@Override
 	public TextComponentParser getSuccessor() {

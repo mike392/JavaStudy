@@ -22,9 +22,9 @@ public class TextComposite extends TextComponent {
 		StringBuilder result = new StringBuilder();
 		for (TextComponent component : components){
 			result.append(component.toString()); 
+			result.append((getDelimiter() == null) ? "" : getDelimiter());
 		}
-		result = new StringBuilder(result.toString().trim());
-		result.append((getDelimiter() == null) ? "" : getDelimiter());
+		
 		return result.toString();
 	}
 }

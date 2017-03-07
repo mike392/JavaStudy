@@ -4,12 +4,12 @@ import java.util.regex.Pattern;
 
 import com.study.disassembler.parser.AbstractParser;
 import com.study.disassembler.parser.TextComponentParser;
-import com.study.disassembler.util.RegExp;
+import com.study.disassembler.util.Constants;
 
 public class SymbolParser extends AbstractParser implements TextComponentParser {
 
 	public SymbolParser(){
-		setPattern(Pattern.compile(RegExp.SYMBOL_PATTERN));
+		setPattern(Pattern.compile(Constants.SYMBOL_PATTERN));
 
 	}
 	@Override
