@@ -1,5 +1,0 @@
-package com.study.tune.entity;
-
-public enum ElectronicTuneType {
-	FAST, SLOW, NONE
-}

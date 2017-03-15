@@ -18,6 +18,7 @@ public class CompositePopulator {
 			TextComponent component = new TextComposite();
 			if (parser.hasSuccesor()) {
 				component.setDelimiter(((AbstractParser) parser).getEndSymbol());
+				component.setComponentType(getParserNameByObject(parser));
 				compositeObject.addComponent(component);
 				populateCompositeObject(matcher.group(2), parser.getSuccessor(), component);
 				} else {
@@ -35,4 +36,15 @@ public class CompositePopulator {
 		}
 		return compositeObject;
 	}
+	
+	private static ParserEnum getParserNameByObject(TextComponentParser parser){
+		ParserEnum result = null;
+		for (ParserEnum item : ParserEnum.values()){
+			if (item.getParser().getClass().equals(parser.getClass())){
+				result = item;
+			}
+		}
+		return result;
+	}
+	
 }

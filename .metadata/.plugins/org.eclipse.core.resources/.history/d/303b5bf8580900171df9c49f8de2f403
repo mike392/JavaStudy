@@ -1,0 +1,22 @@
+package com.study.disassembler.action;
+
+import java.util.HashMap;
+import java.util.TreeMap;
+
+import com.study.disassembler.composite.TextComponent;
+import com.study.disassembler.composite.TextCompositeHandler;
+
+public class LexemeSorter {
+	public static TreeMap<String, Integer> getSortedLexemeMap(TextCompositeHandler handler){
+		HashMap<String, Integer> unsortedResult = new HashMap<String, Integer>();
+		unsortedResult = constructRawLexemeMap(unsortedResult, handler.getCompositeTextObject());
+		sortedResult = new TreeMap<String, Integer>();
+		return result;
+	}
+
+	private static HashMap<String, Integer> constructRawLexemeMap(HashMap<String, Integer> input, TextComponent component) {
+		
+		
+		return null;
+	} 
+}

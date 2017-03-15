@@ -1,5 +1,8 @@
 package com.study.disassembler.main;
 
+import java.util.TreeMap;
+
+import com.study.disassembler.action.LexemeSorter;
 import com.study.disassembler.composite.TextCompositeHandler;
 import com.study.disassembler.parser.ParserEnum;
 import com.study.disassembler.parser.TextComponentParser;
@@ -16,6 +19,7 @@ public class TextDisassembler {
 		ParserEnum item = ParserEnum.valueOf(Constants.TOP_LEVEL_PARSER);
 		TextComponentParser parser = item.getParser();
 		handler.setCompositeTextObject(CompositePopulator.populateCompositeObject(input, parser, handler.getCompositeTextObject()));
+		TreeMap<String, Integer> result = LexemeSorter.getSortedLexemeMap(handler);
 		System.out.println(handler.getCompositeTextObject().toString());
 	}
 
