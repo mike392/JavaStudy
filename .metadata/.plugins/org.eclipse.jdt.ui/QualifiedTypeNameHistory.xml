@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.study.abiturient.abiturientlist.utils.AbiturientListGenerator"/>
-<fullyQualifiedTypeName name="com.study.abiturient.abiturientlist.utils.CustomAbiturientComparator"/>
-<fullyQualifiedTypeName name="com.study.abiturient.abiturientlist.utils.ListSorter"/>
-<fullyQualifiedTypeName name="com.study.abiturient.abiturientlist.abiturient.Abiturient"/>
-<fullyQualifiedTypeName name="com.study.abiturient.abiturientlist.utils.ReportPrinter"/>
-<fullyQualifiedTypeName name="com.study.abiturient.abiturientlist.utils.Constants"/>
-<fullyQualifiedTypeName name="com.study.digitsum.utils.impl.InputFileReader"/>
-<fullyQualifiedTypeName name="com.study.digitsum.utils.InputIdentifier"/>
-<fullyQualifiedTypeName name="com.study.digitsum.utils.InputReader"/>
-<fullyQualifiedTypeName name="com.study.digitsum.utils.impl.InputConsoleReader"/>
-<fullyQualifiedTypeName name="org.apache.logging.log4j.Logger"/>
 <fullyQualifiedTypeName name="org.apache.logging.log4j.core.Logger"/>
 <fullyQualifiedTypeName name="org.apache.logging.log4j.LogManager"/>
 <fullyQualifiedTypeName name="com.study.digitsum.main.Calculator"/>
@@ -20,7 +9,6 @@
 <fullyQualifiedTypeName name="org.apache.logging.log4j.Level"/>
 <fullyQualifiedTypeName name="java.lang.reflect.Method"/>
 <fullyQualifiedTypeName name="java.lang.reflect.Modifier"/>
-<fullyQualifiedTypeName name="java.util.Comparator"/>
 <fullyQualifiedTypeName name="com.study.tune.util.TuneDurationComparatorAsc"/>
 <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
 <fullyQualifiedTypeName name="com.study.tune.util.Constants"/>
@@ -54,10 +42,22 @@
 <fullyQualifiedTypeName name="com.study.tune.util.ReportPrinter"/>
 <fullyQualifiedTypeName name="test.com.study.tune.util.TuneWithinDurationRangeFinderTest"/>
 <fullyQualifiedTypeName name="test.com.study.tune.action.ReportPrinterTest"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="org.junit.Test"/>
 <fullyQualifiedTypeName name="com.study.tune.creator.TuneCreator"/>
 <fullyQualifiedTypeName name="com.study.tune.entity.Tune"/>
 <fullyQualifiedTypeName name="org.junit.Assert"/>
 <fullyQualifiedTypeName name="test.com.study.tune.creator.TuneCreatorTest"/>
+<fullyQualifiedTypeName name="java.util.TreeMap"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="com.study.disassembler.composite.TextCompositeHandler"/>
+<fullyQualifiedTypeName name="com.study.disassembler.composite.TextComponent"/>
+<fullyQualifiedTypeName name="com.study.disassembler.composite.TextComposite"/>
+<fullyQualifiedTypeName name="com.study.disassembler.parser.ParserEnum"/>
+<fullyQualifiedTypeName name="java.util.Collections"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.study.disassembler.action.LexemeSorter"/>
+<fullyQualifiedTypeName name="java.util.Comparator"/>
+<fullyQualifiedTypeName name="java.util.Map.Entry"/>
+<fullyQualifiedTypeName name="com.study.disassembler.util.LexemeEntryComparatorByKey"/>
+<fullyQualifiedTypeName name="com.study.disassembler.util.LexemeEntryComparatorByValue"/>
 </qualifiedTypeNameHistroy>
