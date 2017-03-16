@@ -32,7 +32,6 @@ public class CompositePopulator {
 					}
 					compositeObject.addComponent(component);
 				}
-			System.out.println(matcher.group(2));
 		}
 		return compositeObject;
 	}

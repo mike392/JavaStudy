@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="LexemeSorterTest" project="TextDisassembler" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="test.com.study.disassembler.action.LexemeSorterTest" time="0.397">
+    <testcase name="getSortedLexemeMapNegativeTest" classname="test.com.study.disassembler.action.LexemeSorterTest" time="0.392"/>
+    <testcase name="getSortedLexemeMapTest" classname="test.com.study.disassembler.action.LexemeSorterTest" time="0.005"/>
+  </testsuite>
+</testrun>

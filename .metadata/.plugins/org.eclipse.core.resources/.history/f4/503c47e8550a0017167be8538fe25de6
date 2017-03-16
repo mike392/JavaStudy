@@ -1,0 +1,24 @@
+package test.com.study.disassembler.action;
+
+import org.junit.Before;
+
+import com.study.disassembler.composite.TextCompositeHandler;
+import com.study.disassembler.parser.ParserEnum;
+import com.study.disassembler.parser.TextComponentParser;
+import com.study.disassembler.parsermanager.CompositePopulator;
+import com.study.disassembler.util.Constants;
+import com.study.disassembler.util.InputFileReader;
+
+public class LexemeSorterTest {
+	private String input;
+	private TextCompositeHandler handler;
+	private TextComponentParser parser;
+	@Before
+	public void initalizeCompositeObjectPrerequisites(){
+		input = InputFileReader.readInput();
+		handler = new TextCompositeHandler();
+		ParserEnum item = ParserEnum.valueOf(Constants.TOP_LEVEL_PARSER);
+		parser = item.getParser();
+		handler.setCompositeTextObject(CompositePopulator.populateCompositeObject(input, parser, handler.getCompositeTextObject()));
+	}
+}

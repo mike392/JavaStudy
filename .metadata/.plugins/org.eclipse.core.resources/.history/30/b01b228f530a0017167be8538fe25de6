@@ -1,0 +1,20 @@
+package test.com.study.disassembler.parsermanager;
+
+import org.junit.Before;
+import org.junit.Test;
+import com.study.disassembler.composite.TextCompositeHandler;
+import com.study.disassembler.parser.TextComponentParser;
+
+public class CompositePopulatorTest {
+	private String input;
+	private TextCompositeHandler handler;
+	private TextComponentParser parser;
+	@Before
+	public void initalizeCompositeObjectPrerequisites(){
+		
+	}
+	@Test
+	public void populateCompositeObjectPositiveTest(){
+		
+	}
+}

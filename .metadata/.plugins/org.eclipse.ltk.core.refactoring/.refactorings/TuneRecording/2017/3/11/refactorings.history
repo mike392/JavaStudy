@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;InputFileReaderTest.java&apos; to &apos;TextDisassembler/src/test.com.study.disassembler.util&apos;&#x0D;&#x0A;- Original project: &apos;TuneRecording&apos;&#x0D;&#x0A;- Destination element: &apos;TextDisassembler/src/test.com.study.disassembler.util&apos;&#x0D;&#x0A;- Original element: &apos;test.com.study.tune.util.InputFileReaderTest.java&apos;" description="Copy compilation unit" destination="=TextDisassembler/src&lt;test.com.study.disassembler.util" element1="/src&lt;test.com.study.tune.util{InputFileReaderTest.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1489670694438" units="1" version="1.0"/>
+</session>

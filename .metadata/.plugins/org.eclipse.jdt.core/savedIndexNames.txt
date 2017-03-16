@@ -10,7 +10,6 @@ INDEX VERSION 1.129+D:\workspace\StudyProject\.metadata\.plugins\org.eclipse.jdt
 81436892.index
 134561512.index
 217264132.index
-1769093953.index
 2594228055.index
 3595340660.index
 4284830473.index
@@ -19,7 +18,6 @@ INDEX VERSION 1.129+D:\workspace\StudyProject\.metadata\.plugins\org.eclipse.jdt
 2323299764.index
 1990958345.index
 2973343069.index
-733439246.index
 2700047115.index
 645389615.index
 2377691303.index

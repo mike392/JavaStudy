@@ -1,0 +1,37 @@
+package test.com.study.disassembler.parsermanager;
+
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+
+import com.study.disassembler.composite.TextComponent;
+import com.study.disassembler.composite.TextCompositeHandler;
+import com.study.disassembler.parser.ParserEnum;
+import com.study.disassembler.parser.TextComponentParser;
+import com.study.disassembler.parsermanager.CompositePopulator;
+import com.study.disassembler.util.Constants;
+import com.study.disassembler.util.InputFileReader;
+
+public class CompositePopulatorTest {
+	private String input;
+	private TextCompositeHandler handler;
+	private TextComponentParser parser;
+	@Before
+	public void initalizeCompositeObjectPrerequisites(){
+		input = InputFileReader.readInput();
+		handler = new TextCompositeHandler();
+		ParserEnum item = ParserEnum.valueOf(Constants.TOP_LEVEL_PARSER);
+		parser = item.getParser();
+	}
+	@Test
+	public void populateCompositeObjectPositiveTest(){
+		TextComponent component = CompositePopulator.populateCompositeObject(input, parser, handler.getCompositeTextObject());
+		Assert.assertFalse(component.toString().isEmpty());
+	}
+	
+	@Test
+	public void populateCompositeObjectNegativeTest(){
+		TextComponent component = CompositePopulator.populateCompositeObject("", parser, handler.getCompositeTextObject());
+		Assert.assertTrue(component.toString().isEmpty());
+	}
+}
