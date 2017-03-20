@@ -1,6 +1,7 @@
 package com.study.market.entity.impl;
 
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 
 import com.study.market.action.MarketAction;
@@ -12,24 +13,28 @@ import com.study.market.util.Constants;
 public class ShareMarket extends Market implements MarketAction {
 
 	private final static ShareMarket INSTANCE = new ShareMarket(); 
-	private static ReentrantLock lock = new ReentrantLock();
 	private static Random randomGenerator = new Random();
 	private ShareMarket(){
 		super();
 	}
 	
 	public static ShareMarket getInstance(){
-		return INSTANCE;
+		try {
+			lock.lock();
+			return INSTANCE;
+		} finally {
+			lock.unlock();
+		}
 	}
 	
 	@Override
 	public Share getFirstCheapestShareToBuy() {
-		return shares.first();
+		return this.getShares().first();
 	}
 
 	@Override
 	public Share getFirstMostExpensiveShareToSell() {
-		return shares.last();
+		return this.getShares().last();
 	}
 
 	@Override
@@ -48,7 +53,7 @@ public class ShareMarket extends Market implements MarketAction {
 		lock.lock();
 		double initialPrice = ShareEnum.valueOf(share.getName()).getShare().getPrice();
 		removeShare(share);
-		System.out.println("Share " + share.getName() + " was bought for " + share.getPrice() + "\n");
+		//System.out.println("\u001b[1;32mShare\u001b[0m " + share.getName() + " was bought for " + share.getPrice() + "\n");
 		ShareEnum.valueOf(share.getName()).getShare().setPrice(initialPrice + randomGenerator.nextDouble() * Constants.RANDOM_CAPACITY);
 		addShare(share);
 		lock.unlock();
@@ -59,7 +64,7 @@ public class ShareMarket extends Market implements MarketAction {
 		lock.lock();
 		double initialPrice = ShareEnum.valueOf(share.getName()).getShare().getPrice();
 		removeShare(share);
-		System.out.println("Share " + share.getName() + " was sold for " + share.getPrice() + "\n");
+		//System.out.println("Share " + share.getName() + " was sold for " + share.getPrice() + "\n");
 		ShareEnum.valueOf(share.getName()).getShare().setPrice(initialPrice - randomGenerator.nextDouble() * Constants.RANDOM_CAPACITY);
 		addShare(share);
 		lock.unlock();

@@ -1,0 +1,11 @@
+package com.study.market.entity.impl;
+
+public class ShareMarketRunnable extends ShareMarket implements Runnable {
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

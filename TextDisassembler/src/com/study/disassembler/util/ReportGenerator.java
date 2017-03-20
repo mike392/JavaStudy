@@ -5,8 +5,15 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map.Entry;
 
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import com.study.tune.util.Constants;
+import com.study.tune.util.ReportPrinter;
+
 public class ReportGenerator {
-	
+	static Logger logger = LogManager.getLogger(ReportGenerator.class);
 	public static boolean printReport(List<Entry<String, Integer>> input){
 		boolean output = false;
 		try(FileWriter writer = new FileWriter(Constants.OUTPUT_PATH)) {
@@ -15,7 +22,7 @@ public class ReportGenerator {
 			}
 			output = true;
 		} catch (IOException e) {
-			e.printStackTrace();
+			logger.log(Level.ERROR, "Error when writing to output file - " + Constants.OUTPUT_PATH);
 		}
 		return output;
 	}

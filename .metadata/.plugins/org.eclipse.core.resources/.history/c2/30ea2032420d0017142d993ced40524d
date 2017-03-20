@@ -1,0 +1,32 @@
+package com.study.market.entity.impl;
+
+import java.util.Comparator;
+import java.util.SortedSet;
+import java.util.TreeSet;
+import java.util.concurrent.TimeUnit;
+
+import com.study.market.entity.Market;
+import com.study.market.entity.Share;
+import com.study.market.util.ColorConstants;
+import com.study.market.util.Constants;
+
+public class ShareMarketRunnable extends Market implements Runnable {
+	private SortedSet<Share> sharesMemo = new TreeSet<>(Comparator.comparing(Share::getPrice));
+	@Override
+	public void run() {
+		while (true){
+		printSharePrices();
+		try {
+			TimeUnit.MILLISECONDS.wait(Constants.SLEEP_TIME);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		}
+	}
+	private void printSharePrices() {
+		for (Share share : shares){
+			System.out.printf(ColorConstants.RED_PATTERN, share.getName(), share.getPrice());
+		}
+	}
+
+}

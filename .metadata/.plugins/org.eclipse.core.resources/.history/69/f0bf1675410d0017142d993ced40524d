@@ -1,0 +1,17 @@
+package com.study.market.entity.impl;
+
+import java.util.Comparator;
+import java.util.SortedSet;
+import java.util.TreeSet;
+import com.study.market.entity.Market;
+import com.study.market.entity.Share;
+
+public class ShareMarketRunnable extends Market implements Runnable {
+	private SortedSet<Share> sharesMemo = new TreeSet<>(Comparator.comparing(Share::getPrice));
+	@Override
+	public void run() {
+		
+
+	}
+
+}

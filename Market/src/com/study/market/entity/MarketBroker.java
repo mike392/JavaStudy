@@ -25,13 +25,13 @@ public class MarketBroker extends Thread {
 		addToPortfolio(share);
 		balance = balance - share.getPrice();
 		ShareMarket.getInstance().performBuyOrder(share);
-		//System.out.println("Broker " + id + " has balance " + balance + "\n");
+		System.out.println("Broker " + id + " has balance " + balance + "\n");
 	}
 	private void sellShare(Share share){
 		takeFromPortfolio(share);
 		balance = balance + share.getPrice();
 		ShareMarket.getInstance().performSellOrder(share);
-		//System.out.println("Broker " + id + " has balance " + balance + "\n");
+		System.out.println("Broker " + id + " has balance " + balance + "\n");
 	}
 	
 	public void run(){
