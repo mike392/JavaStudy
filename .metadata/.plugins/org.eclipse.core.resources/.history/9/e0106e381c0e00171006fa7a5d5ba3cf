@@ -1,0 +1,58 @@
+package com.study.market.entity.impl;
+
+import java.util.Comparator;
+import java.util.Iterator;
+import java.util.SortedSet;
+import java.util.TreeSet;
+import java.util.concurrent.TimeUnit;
+
+import com.study.market.entity.Market;
+import com.study.market.entity.Share;
+import com.study.market.util.ColorConstants;
+import com.study.market.util.Constants;
+
+public class ShareMarketRunnable extends Market implements Runnable {
+	private SortedSet<Share> sharesMemo = new TreeSet<>(Comparator.comparing(Share::getPrice));
+	private SortedSet<Share> refShares;
+	@Override
+	public void run() {
+		sharesMemo = ShareMarket.getInstance().getShares(); 
+		while (true) {
+		printSharePrices();
+		}
+	}
+	
+	private void printSharePrices() {
+		SortedSet<Share> refShares = ShareMarket.getInstance().getShares();
+		for (Share share : refShares){
+			Share refShare = getShareByName(share.getName());
+			if (refShare.getPrice() < share.getPrice()){
+				System.out.printf(ColorConstants.GREEN_PATTERN + "\n", share.getName(), share.getPrice());
+			} else {
+				if (refShare.getPrice() > share.getPrice()){
+					System.out.printf(ColorConstants.RED_PATTERN + "\n", share.getName(), share.getPrice());
+				} else {
+					System.out.printf(ColorConstants.BLACK_PATTERN + "\n", share.getName(), share.getPrice());
+				}
+			}
+		}
+		System.out.println("---------------------------------------------------------------------------------");
+		sharesMemo = new TreeSet<Share>(refShares);
+		try {
+			TimeUnit.MILLISECONDS.sleep(Constants.SLEEP_TIME);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+
+	private Share getShareByName(String name) {
+		Share result = (Share) new Object();
+		for (Share share : sharesMemo){
+			if (name.matches(share.getName())){
+				result = share;
+			}
+		}
+		return result;
+	}
+
+}

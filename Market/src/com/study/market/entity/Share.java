@@ -1,35 +1,29 @@
 package com.study.market.entity;
 
-import java.util.concurrent.locks.ReentrantLock;
-
 public class Share {
 	private String name;
 	private double price;
-	private static ReentrantLock lock = new ReentrantLock();
+	private boolean increasing;
 	public Share(String name, double price){
 		this.name = name;
 		this.price = price;
 	}
 	
 	public String getName(){
-		try {
-			lock.lock();
-			return name;
-		} finally {
-			lock.unlock();
-		}
-		
+		return name;
 	}
 	public double getPrice() {
-		try {
-			lock.lock();
-			return price;
-		} finally {
-			lock.unlock();
-		}
-		
+		return price;
 	}
 	public void setPrice(double price) {
 		this.price = price;
+	}
+
+	public boolean isIncreasing() {
+		return increasing;
+	}
+
+	public void setIncreasing(boolean increasing) {
+		this.increasing = increasing;
 	}
 }

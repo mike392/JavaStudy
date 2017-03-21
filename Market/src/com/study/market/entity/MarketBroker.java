@@ -2,13 +2,20 @@ package com.study.market.entity;
 
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
+
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.study.market.entity.impl.ShareMarket;
+import com.study.market.entity.impl.ShareMarketRunnable;
 import com.study.market.util.Constants;
 
 public class MarketBroker extends Thread {
 	private int id;
 	private double balance;
 	private HashMap<Share, Integer> investPortfolio = new HashMap<Share, Integer>();
+	static Logger logger = LogManager.getLogger(MarketBroker.class);
 	public MarketBroker(int id){
 		this.id = id;
 		this.setBalance(Constants.INITIAL_BALANCE);
@@ -25,13 +32,13 @@ public class MarketBroker extends Thread {
 		addToPortfolio(share);
 		balance = balance - share.getPrice();
 		ShareMarket.getInstance().performBuyOrder(share);
-		System.out.println("Broker " + id + " has balance " + balance + "\n");
+		//System.out.println("Broker " + id + " has balance " + balance + "\n");
 	}
 	private void sellShare(Share share){
 		takeFromPortfolio(share);
 		balance = balance + share.getPrice();
 		ShareMarket.getInstance().performSellOrder(share);
-		System.out.println("Broker " + id + " has balance " + balance + "\n");
+		//System.out.println("Broker " + id + " has balance " + balance + "\n");
 	}
 	
 	public void run(){
@@ -40,7 +47,7 @@ public class MarketBroker extends Thread {
 			try {
 				TimeUnit.MILLISECONDS.sleep(Constants.SLEEP_TIME);
 			} catch (InterruptedException e) {
-				e.printStackTrace();
+				logger.log(Level.ERROR, "Some error with thread sleeping" + e.getMessage());
 			}
 		}
 		System.out.println("Broker " + id + " has no money left");

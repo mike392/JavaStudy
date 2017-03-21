@@ -1,0 +1,40 @@
+package com.study.market.entity.impl;
+
+import java.util.SortedSet;
+import java.util.concurrent.TimeUnit;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import com.study.market.entity.Market;
+import com.study.market.entity.Share;
+import com.study.market.util.ColorConstants;
+import com.study.market.util.Constants;
+
+public class ShareMarketRunnable extends Market implements Runnable {
+	static Logger logger = LogManager.getLogger(ShareMarketRunnable.class);
+	private SortedSet<Share> refShares;
+	@Override
+	public void run() {
+		while (true) {
+		printSharePrices();
+		}
+	}
+	
+	private void printSharePrices() {
+		refShares = ShareMarket.getInstance().getShares();
+		for (Share share : refShares){
+			if (share.isIncreasing()){
+				System.out.printf(ColorConstants.GREEN_PATTERN + "\n", share.getName(), share.getPrice());
+			} else {
+				System.out.printf(ColorConstants.RED_PATTERN + "\n", share.getName(), share.getPrice());
+			}
+		}
+		System.out.println("---------------------------------------------------------------------------------");
+		try {
+			TimeUnit.MILLISECONDS.sleep(Constants.SLEEP_TIME);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+}

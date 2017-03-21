@@ -1,0 +1,21 @@
+package com.study.market.entity;
+
+public class Share {
+	private String name;
+	private double price;
+	private boolean increasing;
+	public Share(String name, double price){
+		this.name = name;
+		this.price = price;
+	}
+	
+	public String getName(){
+		return name;
+	}
+	public double getPrice() {
+		return price;
+	}
+	public void setPrice(double price) {
+		this.price = price;
+	}
+}

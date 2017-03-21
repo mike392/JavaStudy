@@ -19,12 +19,7 @@ public class ShareMarket extends Market implements MarketAction {
 	}
 	
 	public static ShareMarket getInstance(){
-		try {
-			lock.lock();
-			return INSTANCE;
-		} finally {
-			lock.unlock();
-		}
+		return INSTANCE;
 	}
 	
 	@Override
@@ -50,24 +45,31 @@ public class ShareMarket extends Market implements MarketAction {
 
 	@Override
 	public void performBuyOrder(Share share) {
-		lock.lock();
-		double initialPrice = ShareEnum.valueOf(share.getName()).getShare().getPrice();
-		removeShare(share);
-		//System.out.println("\u001b[1;32mShare\u001b[0m " + share.getName() + " was bought for " + share.getPrice() + "\n");
-		ShareEnum.valueOf(share.getName()).getShare().setPrice(initialPrice + randomGenerator.nextDouble() * Constants.RANDOM_CAPACITY);
-		addShare(share);
-		lock.unlock();
+		try {
+			lock.lock();
+			double initialPrice = ShareEnum.valueOf(share.getName()).getShare().getPrice();
+			removeShare(share);
+			//System.out.println("\u001b[1;32mShare\u001b[0m " + share.getName() + " was bought for " + share.getPrice() + "\n");
+			ShareEnum.valueOf(share.getName()).getShare().setPrice(initialPrice + randomGenerator.nextDouble() * Constants.RANDOM_CAPACITY);
+			ShareEnum.valueOf(share.getName()).getShare().setIncreasing(true);
+			addShare(share);
+		} finally {
+			lock.unlock();
+		}
 	}
 
 	@Override
 	public void performSellOrder(Share share) {
-		lock.lock();
-		double initialPrice = ShareEnum.valueOf(share.getName()).getShare().getPrice();
-		removeShare(share);
-		//System.out.println("Share " + share.getName() + " was sold for " + share.getPrice() + "\n");
-		ShareEnum.valueOf(share.getName()).getShare().setPrice(initialPrice - randomGenerator.nextDouble() * Constants.RANDOM_CAPACITY);
-		addShare(share);
-		lock.unlock();
-		
+		try {
+			lock.lock();
+			double initialPrice = ShareEnum.valueOf(share.getName()).getShare().getPrice();
+			removeShare(share);
+			//System.out.println("Share " + share.getName() + " was sold for " + share.getPrice() + "\n");
+			ShareEnum.valueOf(share.getName()).getShare().setPrice(initialPrice - randomGenerator.nextDouble() * Constants.RANDOM_CAPACITY);
+			ShareEnum.valueOf(share.getName()).getShare().setIncreasing(false);
+			addShare(share);
+		} finally {
+			lock.unlock();
+		}
 	}
 }
