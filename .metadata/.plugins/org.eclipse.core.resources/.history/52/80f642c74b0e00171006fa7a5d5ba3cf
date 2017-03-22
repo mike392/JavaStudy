@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/Pharmacy" xmlns:tns="http://www.example.org/Pharmacy" elementFormDefault="qualified">
+
+
+
+
+    
+
+    
+
+    
+
+    <element name="medicine" type="tns:Medicine" abstract="true"></element>
+    
+    <complexType name="Medicine">
+    	<attribute name="name" type="string"></attribute>
+    	<attribute name="pharm" type="string"></attribute>
+    	<attribute name="group">
+    		<simpleType>
+    			<restriction base="string">
+    				<enumeration value="painkiller"></enumeration>
+    				<enumeration value="antibiotic"></enumeration>
+    				<enumeration value="vitamin"></enumeration>
+    			</restriction>
+    		</simpleType>
+    	</attribute>
+    </complexType>
+</schema>

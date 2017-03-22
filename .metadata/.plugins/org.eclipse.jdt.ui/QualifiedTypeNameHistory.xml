@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.lang.reflect.Field"/>
-<fullyQualifiedTypeName name="org.junit.runners.Suite"/>
-<fullyQualifiedTypeName name="org.junit.runners.Suite.SuiteClasses"/>
-<fullyQualifiedTypeName name="org.junit.runner.RunWith"/>
-<fullyQualifiedTypeName name="test.com.study.tune.util.InputFileReaderTest"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.LinkedList"/>
 <fullyQualifiedTypeName name="test.com.study.tune.action.TuneListPopulatorTest"/>
@@ -56,8 +51,13 @@
 <fullyQualifiedTypeName name="test.com.study.disassembler.action.LexemeSorterTest"/>
 <fullyQualifiedTypeName name="test.com.study.disassembler.util.ReportGeneratorTest"/>
 <fullyQualifiedTypeName name="com.study.market.entity.Market"/>
-<fullyQualifiedTypeName name="java.util.concurrent.TimeUnit"/>
 <fullyQualifiedTypeName name="com.study.market.util.Constants"/>
 <fullyQualifiedTypeName name="com.study.market.util.ColorConstants"/>
 <fullyQualifiedTypeName name="com.study.market.entity.impl.ShareMarketRunnable"/>
+<fullyQualifiedTypeName name="java.util.concurrent.TimeUnit"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="java.util.concurrent.ConcurrentSkipListSet"/>
+<fullyQualifiedTypeName name="java.util.concurrent.CopyOnWriteArraySet"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="org.apache.logging.log4j.Level"/>
 </qualifiedTypeNameHistroy>

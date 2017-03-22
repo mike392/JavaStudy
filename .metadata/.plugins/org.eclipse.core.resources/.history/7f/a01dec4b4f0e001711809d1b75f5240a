@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/Pharmacy" xmlns:tns="http://www.example.org/Pharmacy" elementFormDefault="qualified">
+
+
+
+
+    
+
+    
+
+    
+
+    <element name="medicine" type="tns:Medicine" abstract="true"></element>
+    
+    <complexType name="Medicine">
+    	<sequence>
+    		<element name="certification-info"
+    			type="tns:CertificateInfo">
+    		</element>
+    		<element name="package" type="tns:Package"></element>
+    		<element name="dosage" type="tns:Dosage"></element>
+    	</sequence>
+        <attribute name="id" type="ID"></attribute>
+        <attribute name="name" type="string"></attribute>
+    	<attribute name="pharm" type="string"></attribute>
+    	<attribute name="group">
+    		<simpleType>
+    			<restriction base="string">
+    				<enumeration value="painkiller"></enumeration>
+    				<enumeration value="antibiotic"></enumeration>
+    				<enumeration value="vitamin"></enumeration>
+    			</restriction>
+    		</simpleType>
+    	</attribute>
+    	<attribute name="version">
+    		<simpleType>
+    			<restriction base="string">
+    				<enumeration value="tablet"></enumeration>
+    				<enumeration value="capsule"></enumeration>
+    				<enumeration value="powder"></enumeration>
+    			</restriction>
+    		</simpleType>
+    	</attribute>
+    </complexType>
+
+
+    <complexType name="CertificateInfo">
+    	<sequence>
+    		<element name="certification-enterprise" type="tns:CertificationEnterprise"></element>
+    	</sequence>
+    	<attribute name="cert-number" type="int"></attribute>
+    	<attribute name="expiration-date" type="date"></attribute>
+    </complexType>
+
+    <complexType name="CertificationEnterprise">
+    	<attribute name="name" type="string"></attribute>
+    	<attribute name="id" type="ID"></attribute>
+    </complexType>
+
+
+    <complexType name="Package">
+    	<attribute name="package-type" type="string"></attribute>
+    	<attribute name="amount" type="int"></attribute>
+    	<attribute name="price" type="int"></attribute>
+    </complexType>
+
+    <complexType name="Dosage">
+    	<attribute name="amount" type="int"></attribute>
+    	<attribute name="periodicity" type="int"></attribute>
+    </complexType>
+
+
+
+    <element name="foreign-medicine" type="tns:ForeignMedicine"></element>
+
+
+    <complexType name="ForeignMedicine">
+    	<complexContent>
+    		<extension base="tns:Medicine">
+    			<attribute name="country">
+    				<simpleType>
+    					<restriction base="string">
+    						<pattern value="\w{3,20}"></pattern>
+    					</restriction>
+    				</simpleType>
+    			</attribute>
+    		</extension>
+    	</complexContent>
+    </complexType>
+
+    <complexType name="DomesticMedicine">
+    	<complexContent>
+    		<extension base="tns:Medicine">
+    			<attribute name="country">
+    				<simpleType>
+    					<restriction base="string">
+    						<enumeration value="Belarus"></enumeration>
+    					</restriction>
+    				</simpleType>
+    			</attribute>
+    		</extension>
+    	</complexContent>
+    </complexType>
+
+    <element name="domestic-medicine" type="tns:DomesticMedicine"></element>
+</schema>

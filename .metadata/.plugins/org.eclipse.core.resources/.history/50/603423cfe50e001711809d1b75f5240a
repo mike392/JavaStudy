@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:medicines xmlns:tns="http://www.example.org/Pharmacy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/Pharmacy Pharmacy.xsd ">
+  <tns:foreign-medicine group="painkiller" id="idvalue0" name="" pharm="" version="tablet" country="Zimbabwe" xsi:type="tns:Medicine">
+    <tns:certification-info cert-number="idvalue1" expiration-date="2001-01-01">
+      <tns:certification-enterprise id="idvalue10" name=""/>
+    </tns:certification-info>
+    <tns:package amount="1" package-type="" price="1"/>
+    <tns:dosage amount="1" periodicity="1"/>
+  </tns:foreign-medicine>
+  <tns:domestic-medicine group="painkiller" id="idvalue2" name="" pharm="" version="tablet" country="Belarus" xsi:type="tns:Medicine">
+    <tns:certification-info cert-number="idvalue3" expiration-date="2001-01-01">
+      <tns:certification-enterprise id="idvalue11" name="someentrr"/>
+    </tns:certification-info>
+    <tns:package amount="1" package-type="" price="1"/>
+    <tns:dosage amount="1" periodicity="1"/>
+  </tns:domestic-medicine>
+</tns:medicines>

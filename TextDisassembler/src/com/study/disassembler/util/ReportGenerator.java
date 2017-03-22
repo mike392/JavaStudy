@@ -9,15 +9,12 @@ import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.study.tune.util.Constants;
-import com.study.tune.util.ReportPrinter;
-
 public class ReportGenerator {
 	static Logger logger = LogManager.getLogger(ReportGenerator.class);
 	public static boolean printReport(List<Entry<String, Integer>> input){
 		boolean output = false;
 		try(FileWriter writer = new FileWriter(Constants.OUTPUT_PATH)) {
-			for (Entry item : input){
+			for (Entry<String, Integer> item : input){
 				writer.write("Lexeme - " + item.getKey().toString() + " - occured " + item.getValue().toString() + " times" + "\n");
 			}
 			output = true;

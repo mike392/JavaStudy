@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/Pharmacy" xmlns:tns="http://www.example.org/Pharmacy" elementFormDefault="qualified">
+
+
+
+
+    
+
+    
+
+    
+
+    <element name="medicine" type="tns:Medicine" abstract="true"></element>
+    
+    <complexType name="Medicine">
+    	<attribute name="name" type="string"></attribute>
+    	<attribute name="pharm" type="string"></attribute>
+    	<attribute name="group">
+    		<simpleType>
+    			<restriction base="string">
+    				<enumeration value="painkiller"></enumeration>
+    				<enumeration value="antibiotic"></enumeration>
+    				<enumeration value="vitamin"></enumeration>
+    			</restriction>
+    		</simpleType>
+    	</attribute>
+    	<attribute name="version">
+    		<simpleType>
+    			<restriction base="string">
+    				<enumeration value="tablet"></enumeration>
+    				<enumeration value="capsule"></enumeration>
+    				<enumeration value="powder"></enumeration>
+    			</restriction>
+    		</simpleType>
+    	</attribute>
+    	<attribute name="certificate" type="tns:certificateInfo"></attribute>
+    	<attribute name="package" type="string"></attribute>
+    </complexType>
+
+
+    <complexType name="CertificateInfo">
+    	<attribute name="cert-number" type="int"></attribute>
+    	<attribute name="expiration-date" type="date"></attribute>
+    	<attribute name="certification-enterprise" type="string"></attribute>
+    </complexType>
+    
+    <complexType name="CertificationEnterprise">
+    	<attribute name="name" type="string"></attribute>
+    </complexType>
+
+
+    <complexType name="Package">
+    	<attribute name="package-type" type="string"></attribute>
+    	<attribute name="amount" type="int"></attribute>
+    	<attribute name="price" type="int"></attribute>
+    </complexType>
+
+    <complexType name="Dosage">
+    	<attribute name="amount" type="int"></attribute>
+    	<attribute name="periodicity" type="int"></attribute>
+    </complexType>
+
+
+</schema>
