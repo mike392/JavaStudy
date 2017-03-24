@@ -1,0 +1,22 @@
+package com.study.parser.entity;
+
+public enum ElementEnum {
+	CERTIFICATIONINFO("certification-info"),
+	CERTIFICATIONENTERPRISE("certification-enterprise"),
+	PACKAGE("package"),
+	DOSAGE("dosage");
+	
+	private String value;
+	
+	private ElementEnum(String value){
+		this.setValue(value);
+	}
+
+	public String getValue() {
+		return value;
+	}
+
+	public void setValue(String value) {
+		this.value = value;
+	}
+}

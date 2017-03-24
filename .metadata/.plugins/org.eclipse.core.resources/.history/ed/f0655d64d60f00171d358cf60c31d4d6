@@ -1,0 +1,30 @@
+package com.study.parser.entity;
+
+public enum AttributeEnum {
+	COUNTRY("country"),
+	GROUP("group"),
+	PHARM("pharm"),
+	VERSION("version"),
+	ID("id"),
+	NAME("name"),
+	CERTNUMBER("cert-number"),
+	EXPIRATIONDATE("expiration-date"),
+	AMOUNT("amount"),
+	PACKAGETYPE("package-type"),
+	PERIODICITY("periodicity"),
+	PRICE("price");
+	
+	private String value;
+	
+	private AttributeEnum(String value){
+		this.setValue(value);
+	}
+
+	public String getValue() {
+		return value;
+	}
+
+	public void setValue(String value) {
+		this.value = value;
+	}
+}

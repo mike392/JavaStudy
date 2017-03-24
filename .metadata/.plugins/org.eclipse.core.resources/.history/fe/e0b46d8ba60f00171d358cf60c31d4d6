@@ -1,0 +1,5 @@
+package com.study.parser.validation;
+
+public class SAXValidator {
+
+}

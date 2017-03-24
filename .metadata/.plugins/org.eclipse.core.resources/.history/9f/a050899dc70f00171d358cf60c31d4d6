@@ -1,0 +1,5 @@
+package com.study.parser.entity;
+
+public enum AttributeEnum {
+
+}

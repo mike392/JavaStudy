@@ -1,0 +1,46 @@
+package com.study.parser.parser;
+
+import org.xml.sax.helpers.DefaultHandler;
+
+import com.study.parser.entity.DomesticMedicine;
+import com.study.parser.entity.ForeignMedicine;
+import com.study.parser.entity.Medicine;
+import java.util.EnumSet;
+import java.util.HashSet;
+import java.util.Set;
+import org.xml.sax.Attributes;
+import org.xml.sax.helpers.DefaultHandler;
+
+public class MedicineHandler extends DefaultHandler {
+	private Set<Medicine> medicines;
+	private Medicine current = null;
+
+	public MedicineHandler() {
+		medicines = new HashSet<Medicine>();
+	}
+	
+	public Set<Medicine> getMedicines() {
+		return medicines;
+	}
+	public void startElement(String uri, String localName, String qName, Attributes attrs) {
+		if ("foreign-medicine".equals(localName) || "domestic-medicine".equals(localName)) {
+			current = "foreign-medicine".equals(localName) ? new ForeignMedicine() : new DomesticMedicine();
+		}
+	}
+	public void endElement(String uri, String localName, String qName) {
+		if ("foreign-medicine".equals(localName) || "domestic-medicine".equals(localName)) {
+			medicines.add(current);
+		}
+	}
+	public void characters(char[] ch, int start, int length) {
+		String s = new String(ch, start, length).trim();
+//
+//	default:
+//		throw new EnumConstantNotPresentException(
+//		currentEnum.getDeclaringClass(), currentEnum.name());
+//		}
+//		}
+//		currentEnum = null;
+	}
+}
+

@@ -1,0 +1,2 @@
+2017-03-23 12:09:03 [main] ERROR com.study.parser.validation - 2 : 189 - cvc-elt.1: Cannot find the declaration of element 'tns:medicines'.
+2017-03-23 12:10:49 [main] ERROR com.study.parser.validation - 2 : 189 - cvc-elt.1: Cannot find the declaration of element 'tns:medicines'.

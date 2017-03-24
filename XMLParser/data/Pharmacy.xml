@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:medicines xmlns:tns="http://www.entity.parser.study.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.resource.parser.study.com Pharmacy.xsd ">
+  <tns:foreign-medicine country="Zimbabwe" group="painkiller" medicine-id="idvalue0" medicine-name="" pharm="" version="tablet">
+    <tns:certificate-info cert-number="idvalue1" expiration-date="2001-01-01">
+      <tns:certification-enterprise enterprise-id="idvalue4" enterprise-name=""/>
+    </tns:certificate-info>
+    <tns:package package-amount="1" package-type="" price="1"/>
+    <tns:dosage dosage-amount="1" dosage-periodicity="1"/>
+  </tns:foreign-medicine>
+  <tns:foreign-medicine country="Zimbabwe" group="painkiller" medicine-id="idvalue2" medicine-name="" pharm="" version="tablet">
+    <tns:certificate-info cert-number="idvalue3" expiration-date="2001-01-01">
+      <tns:certification-enterprise enterprise-id="idvalue5" enterprise-name=""/>
+    </tns:certificate-info>
+    <tns:package package-amount="1" package-type="" price="1"/>
+    <tns:dosage dosage-amount="1" dosage-periodicity="1"/>
+  </tns:foreign-medicine>
+    <tns:domestic-medicine country="Belarus" group="painkiller" medicine-id="idvalue6" medicine-name="" pharm="" version="tablet">
+    <tns:certificate-info cert-number="idvalue7" expiration-date="2001-01-01">
+      <tns:certification-enterprise enterprise-id="idvalue8" enterprise-name=""/>
+    </tns:certificate-info>
+    <tns:package package-amount="1" package-type="" price="1"/>
+    <tns:dosage dosage-amount="1" dosage-periodicity="1"/>
+  </tns:domestic-medicine>
+</tns:medicines>

@@ -1,0 +1,87 @@
+package com.study.parser.parser;
+
+import org.xml.sax.helpers.DefaultHandler;
+
+import com.study.parser.entity.AttributeEnum;
+import com.study.parser.entity.DomesticMedicine;
+import com.study.parser.entity.ElementEnum;
+import com.study.parser.entity.ForeignMedicine;
+import com.study.parser.entity.Medicine;
+
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.HashSet;
+import java.util.Set;
+
+import org.apache.commons.lang3.EnumUtils;
+import org.xml.sax.Attributes;
+
+
+public class MedicineHandler extends DefaultHandler {
+	private Set<Medicine> medicines;
+	private Medicine current = null;
+	private AttributeEnum currentEnum = null;
+
+	public MedicineHandler() {
+		medicines = new HashSet<Medicine>();
+	}
+	
+	public Set<Medicine> getMedicines() {
+		return medicines;
+	}
+	public void startElement(String uri, String localName, String qName, Attributes attrs) {
+		if ("foreign-medicine".equals(localName) || "domestic-medicine".equals(localName)) {
+			current = "foreign-medicine".equals(localName) ? new ForeignMedicine() : new DomesticMedicine();
+		} else {
+			AttributeEnum temp = AttributeEnum.valueOf(localName.toUpperCase());
+			if (temp != null){
+				currentEnum = temp;
+			}
+		}
+			
+	}
+	public void endElement(String uri, String localName, String qName) {
+		if ("foreign-medicine".equals(localName) || "domestic-medicine".equals(localName)) {
+			medicines.add(current);
+		}
+	}
+	public void characters(char[] ch, int start, int length) {
+		String s = new String(ch, start, length).trim();
+		if (currentEnum != null){
+			invokeSetterForAttribute(s);
+		}
+		currentEnum = null;
+//	default:
+//		throw new EnumConstantNotPresentException(
+//		currentEnum.getDeclaringClass(), currentEnum.name());
+//		}
+//		}
+//		currentEnum = null;
+	}
+
+	private void invokeSetterForAttribute(String s) {
+		Method method = getSetterMethodForAttribute(current.getClass());
+		try {
+			method.invoke(s);
+		} catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	private Method getSetterMethodForAttribute(Class<?> clazz) {
+		Method result = null;
+		String attributeName = "";
+		Field[] fieldArray = clazz.getFields();
+		for (Field item : fieldArray){
+			if (EnumUtils.isValidEnum(ElementEnum.class, item.getClass().getSimpleName().toUpperCase())){
+				result = getSetterMethodForAttribute(item.getClass());
+			}
+			
+			
+		}
+		return null;
+	}
+}
+

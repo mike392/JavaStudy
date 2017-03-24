@@ -1,0 +1,8 @@
+package com.study.parser.entity;
+
+public enum ElementEnum {
+	CERTIFICATIONINFO,
+	CERTIFICATIONENTERPRISE,
+	PACKAGE,
+	DOSAGE
+}

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.entity.parser.study.com" xmlns:tns="http://www.entity.parser.study.com" elementFormDefault="qualified">
+    <element name="medicine" type="tns:Medicine" abstract="true"></element>
+	<element name="foreign-medicine" type="tns:ForeignMedicine" substitutionGroup="tns:medicine"></element>
+	<element name="domestic-medicine" type="tns:DomesticMedicine" substitutionGroup="tns:medicine"></element>
+	<element name="medicines">
+		<complexType>
+			<sequence>
+				<element ref="tns:medicine" minOccurs="2" maxOccurs="unbounded"/>
+			</sequence>
+		</complexType>
+	</element>
+    <complexType name="Medicine">
+    	<sequence>
+    		<element name="certification-info"
+    			type="tns:CertificateInfo">
+    		</element>
+    		<element name="package" type="tns:Package"></element>
+    		<element name="dosage" type="tns:Dosage"></element>
+    	</sequence>
+        <attribute name="medicine-id" type="ID" use="required"></attribute>
+        <attribute name="medicine-name" type="string" use="required"></attribute>
+    	<attribute name="pharm" type="string" use="required"></attribute>
+    	<attribute name="group" use="required">
+    		<simpleType>
+    			<restriction base="string">
+    				<enumeration value="painkiller"></enumeration>
+    				<enumeration value="antibiotic"></enumeration>
+    				<enumeration value="vitamin"></enumeration>
+    			</restriction>
+    		</simpleType>
+    	</attribute>
+    	<attribute name="version" use="optional">
+    		<simpleType>
+    			<restriction base="string">
+    				<enumeration value="tablet"></enumeration>
+    				<enumeration value="capsule"></enumeration>
+    				<enumeration value="powder"></enumeration>
+    			</restriction>
+    		</simpleType>
+    	</attribute>
+    </complexType>
+
+    <complexType name="CertificateInfo">
+    	<sequence>
+    		<element name="certification-enterprise" type="tns:CertificationEnterprise"></element>
+    	</sequence>
+    	<attribute name="cert-number" type="ID" use="required"></attribute>
+    	<attribute name="expiration-date" type="date" use="required"></attribute>
+    </complexType>
+
+    <complexType name="CertificationEnterprise">
+    	<attribute name="enterprise-name" type="string" use="required"></attribute>
+    	<attribute name="enterprise-id" use="required">
+    		<simpleType>
+    			<restriction base="ID">
+    				<pattern value="\w{8,20}"></pattern>
+    			</restriction>
+    		</simpleType>
+    	</attribute>
+    </complexType>
+
+    <complexType name="Package">
+    	<attribute name="package-type" type="string" use="required"></attribute>
+    	<attribute name="package-amount" type="positiveInteger" use="optional"></attribute>
+    	<attribute name="price" type="positiveInteger" use="required"></attribute>
+    </complexType>
+
+    <complexType name="Dosage">
+    	<attribute name="dosage-amount" type="positiveInteger" use="required"></attribute>
+    	<attribute name="dosage-periodicity" type="positiveInteger" use="optional"></attribute>
+    </complexType>
+
+    <complexType name="ForeignMedicine">
+    	<complexContent>
+    		<extension base="tns:Medicine">
+    			<attribute name="country">
+    				<simpleType>
+    					<restriction base="string">
+    						<pattern value="\w{3,20}"></pattern>
+    					</restriction>
+    				</simpleType>
+    			</attribute>
+    		</extension>
+    	</complexContent>
+    </complexType>
+
+    <complexType name="DomesticMedicine">
+    	<complexContent>
+    		<extension base="tns:Medicine">
+    			<attribute name="country" use="required">
+    				<simpleType>
+    					<restriction base="string">
+    						<enumeration value="Belarus"></enumeration>
+    					</restriction>
+    				</simpleType>
+    			</attribute>
+    		</extension>
+    	</complexContent>
+    </complexType>
+    
+</schema>

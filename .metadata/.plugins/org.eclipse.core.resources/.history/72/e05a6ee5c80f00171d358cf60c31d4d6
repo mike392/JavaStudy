@@ -1,0 +1,16 @@
+package com.study.parser.entity;
+
+public enum AttributeEnum {
+	COUNTRY,
+	GROUP,
+	PHARM,
+	VERSION,
+	ID,
+	NAME,
+	CERTNUMBER,
+	EXPIRATIONDATE,
+	AMOUNT,
+	PACKAGETYPE,
+	PERIODICITY,
+	PRICE
+}

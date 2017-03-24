@@ -1,0 +1,14 @@
+package com.study.parser.parser;
+
+import org.xml.sax.helpers.DefaultHandler;
+import com.study.parser.entity.Medicine;
+import java.util.EnumSet;
+import java.util.HashSet;
+import java.util.Set;
+import org.xml.sax.Attributes;
+import org.xml.sax.helpers.DefaultHandler;
+
+public class MedicineHandler extends DefaultHandler {
+	private Set<Medicine> students;
+
+}
